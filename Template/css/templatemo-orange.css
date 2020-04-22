@@ -56,15 +56,9 @@ h2 {
   color: #fff;
 }
 
-.about,.skills,
-.education,.languages,
-.contact, .experience {
+.about,.contact {
   padding: 40px;
   min-height: 330px;
-}
-
-.education, .languages,
-.contact, .experience {
   margin-top: 30px;
 }
 
@@ -285,12 +279,5 @@ footer hr {
 @media ( max-width: 360px ) {
   header h1 {
     font-size: 30px;
-  }
-  .about h2 {
-    font-size: 24px;
-  }
-  .education h4,
-  .experience h4 {
-    font-size: 20px;
   }
 }
