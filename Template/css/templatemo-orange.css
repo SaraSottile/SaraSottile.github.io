@@ -216,52 +216,6 @@ header hr {
   box-shadow: 0px 1px 5px rgba(50,50,50,0.08);
 }
 
-/* skills section */
-.skills {
-  background: #C60;
-  color: #f5f5f5;
-}
-.skills .progress {
-  border-radius: 0px;
-  height: 4px;
-}
-.skills .progress .progress-bar-primary {
-  background: #840;
-}
-.skills strong {
-  display: inline-block;
-  font-weight: normal;
-  padding-bottom: 6px;
-}
-
-/* education section */
-.education {
-  background: #C60;
-  color: #f5f5f5;
-}
-.education .education-content {
-  padding-bottom: 14px;
-}
-.education h5 {
-  display: inline-block;
-}
-.education span {
-  padding-right: 10px;
-  padding-left: 20px;
-}
-
-/* languages section */
-.languages {
-  background: #fff;
- box-shadow: 0px 1px 5px rgba(50,50,50,0.08);
-}
-.languages ul {
-  padding: 10px;
-}
-.languages ul li {
-  padding-bottom: 6px;
-}
-
 /* contact section */
 .contact {
   background: #fff;
@@ -269,22 +223,6 @@ header hr {
 }
 .contact .fa {
   padding-right: 6px;
-}
-
-/* experience section */
-.experience {
-  background: #C60;
-  color: #f5f5f5;
-}
-.experience .experience-content {
-  padding-bottom: 14px;
-}
-.experience h5 {
-  display: inline-block;
-}
-.experience span {
-  padding-right: 10px;
-  padding-left: 20px;
 }
 
 /* footer section */
