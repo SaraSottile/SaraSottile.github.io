@@ -184,13 +184,14 @@ header hr {
   white-space: nowrap;
   display: inline-block;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 10px;
   vertical-align: middle;
   border-radius: 5px;
   border: 1px solid #fff;
   position: relative;
   -webkit-transition-duration: 0.5s; /* Safari */
   transition-duration: 0.5s;
+  text-transform: uppercase;
 }
 
 .menu a span {
@@ -207,6 +208,8 @@ header hr {
   transition: all 0.5s;
 }
 
+
+@
 
 /* about section */
 .about {
