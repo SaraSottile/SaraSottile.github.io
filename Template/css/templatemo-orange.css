@@ -293,12 +293,9 @@ footer {
   text-align: center;
   padding-top: 140px;
   padding-bottom: 100px;
+  border-top: 1px solid #C60;
 }
 
-footer hr {
-  border-color: #C60;
-  width: 100px;
-}
 /* social icon section */
 .social-icons {
   padding: 0;
