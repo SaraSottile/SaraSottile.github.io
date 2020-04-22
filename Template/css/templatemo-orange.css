@@ -143,7 +143,7 @@ header {
   min-height: 100px;
   overflow: hidden;
   position: relative;
-  padding-top: 160px;
+  padding-top: 100px;
   padding-bottom: 100px;
 }
 header img {
@@ -291,9 +291,19 @@ header hr {
 footer {
   color: #f9f9f9;
   text-align: center;
-  padding-top: 140px;
+  padding-top: 100px;
   padding-bottom: 100px;
-  border-top: 1px solid #C60;
+}
+
+footer img {
+  display: inline-block !important;
+}
+footer h2 {
+  padding-top: 40px;
+}
+footer hr {
+  border-color: #C60;
+  width: 100px;
 }
 
 /* social icon section */
