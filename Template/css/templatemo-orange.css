@@ -143,8 +143,8 @@ header {
   min-height: 100px;
   overflow: hidden;
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 70px;
+  padding-bottom: 80px;
 }
 header img {
   display: inline-block !important;
