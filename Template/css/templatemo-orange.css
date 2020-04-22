@@ -174,7 +174,7 @@ header hr {
 
 .menu a {
   margin-left: 0 !important;
-  margin-right: 0 !important;
+  margin-right: 6 !important;
   padding: 8px 0 7px 0;
   border: none;
   outline: 0;
@@ -184,14 +184,13 @@ header hr {
   white-space: nowrap;
   display: inline-block;
   text-align: center;
-  letter-spacing: 10px;
+  letter-spacing: 2px;
   vertical-align: middle;
   border-radius: 5px;
   border: 1px solid #fff;
   position: relative;
   -webkit-transition-duration: 0.5s; /* Safari */
   transition-duration: 0.5s;
-  text-transform: uppercase;
 }
 
 .menu a span {
