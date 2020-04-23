@@ -211,7 +211,7 @@ header hr {
 /* about section */
 .about {
   background: #fff;
-  box-shadow: 0px 1px 5px rgba(50,50,50,0.08);
+  box-shadow: -6px -6px 12px 0px rgba(255, 165, 0, 0.71);;
 }
 .about .fa {
   padding-right: 6px;
@@ -220,7 +220,7 @@ header hr {
 /* contact section */
 .contact {
   background: #fff;
-  box-shadow: 0px 1px 5px rgba(50,50,50,0.08);
+  box-shadow: -6px -6px 12px 0px rgba(255, 165, 0, 0.71);;
 }
 .contact .fa {
   padding-right: 6px;
