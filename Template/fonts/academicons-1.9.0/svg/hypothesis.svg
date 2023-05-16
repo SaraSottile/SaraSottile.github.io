@@ -7,23 +7,23 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="crossref.svg"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="hypothes.svg"
+   inkscape:version="1.0 (1.0+r73+1)"
    id="svg8"
    version="1.1"
-   viewBox="0 0 320 512"
+   viewBox="0 0 512 512"
    height="512"
-   width="320">
+   width="512">
   <title
-     id="title833">Crossref</title>
+     id="title861">hypothes.is</title>
   <defs
      id="defs2" />
   <sodipodi:namedview
      inkscape:window-maximized="1"
-     inkscape:window-y="0"
-     inkscape:window-x="56"
-     inkscape:window-height="1043"
-     inkscape:window-width="1864"
+     inkscape:window-y="27"
+     inkscape:window-x="51"
+     inkscape:window-height="713"
+     inkscape:window-width="1315"
      inkscape:guide-bbox="true"
      showguides="true"
      units="px"
@@ -31,26 +31,20 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer6"
      inkscape:document-units="px"
-     inkscape:cy="250.66667"
-     inkscape:cx="-78.666667"
+     inkscape:cy="256"
+     inkscape:cx="299.33333"
      inkscape:zoom="0.75"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
      bordercolor="#666666"
      pagecolor="#ffffff"
-     id="base">
+     id="base"
+     scale-x="1">
     <inkscape:grid
        empspacing="4"
        id="grid10"
        type="xygrid" />
-    <sodipodi:guide
-       inkscape:color="rgb(0,0,255)"
-       inkscape:locked="false"
-       inkscape:label="baseline"
-       id="guide861"
-       orientation="0,1"
-       position="320,64" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -60,12 +54,12 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>Crossref</dc:title>
+        <dc:title>hypothes.is</dc:title>
         <cc:license
            rdf:resource="http://scripts.sil.org/OFL" />
         <dc:subject>
           <rdf:Bag>
-            <rdf:li>Crossref</rdf:li>
+            <rdf:li>hypothes.is</rdf:li>
           </rdf:Bag>
         </dc:subject>
       </cc:Work>
@@ -97,10 +91,8 @@
      id="layer6"
      inkscape:groupmode="layer">
     <path
-       style="stroke-width:2.77830958"
-       d="M 310.36246,40 25.167851,134.01757 217.23482,200.00243 310.36246,169.33249 Z M 9.637541,139.12923 V 271.09895 L 201.67195,205.11409 Z m 207.597279,71.09651 -192.039829,65.98482 77.543069,25.53667 192.06689,-65.95772 z m 93.12764,30.6754 -192.06695,65.9848 192.06695,65.98494 z M 102.73806,311.99758 9.637541,342.66751 V 472 L 294.80495,377.9825 Z"
-       id="polygon4-3"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccccccccccccccccc" />
+       id="path14"
+       style="fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33333"
+       d="m 95.99673,64.000001 c -17.64763,0 -31.99791,14.326535 -31.99791,31.997908 V 416.00444 c 0,17.6464 14.32654,31.99792 31.99791,31.99792 H 207.05647 L 256.00274,512 304.94352,448.00236 h 111.05974 c 17.64639,0 31.99792,-14.32779 31.99792,-31.99792 V 95.997909 c 0,-17.647623 -14.32778,-31.997908 -31.99792,-31.997908 z m 32.00157,63.999469 h 48.12962 v 112.03205 c 0,0 16.04495,-31.98325 47.87142,-31.98325 32.00272,0 64.43527,15.95343 64.43527,65.69504 V 384.00288 H 240.30316 V 288.0586 c 0,-26.06019 -16.30233,-36.05971 -32.30369,-32.05468 -16.00136,3.99879 -31.87155,20.99507 -31.87155,56.04532 v 71.95364 H 127.9983 Z M 367.99999,320.0034 c 17.67638,0 32.00159,14.27716 32.00159,31.89355 0,17.61762 -14.32521,31.89536 -32.00159,31.89536 -17.67136,0 -31.99607,-14.27774 -31.99607,-31.89536 0,-17.61639 14.32471,-31.89355 31.99607,-31.89355 z" />
   </g>
 </svg>
