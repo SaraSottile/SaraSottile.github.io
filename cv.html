@@ -1,100 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- HEAD -->
 <head>
-<meta charset="utf-8">
-<title> Sara Sottile </title>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="">
-<meta name="description" content="">
-
-<!-- CSS FILES -->	
-<link rel="stylesheet" href="Template/css/bootstrap.min.css">
-<link rel="stylesheet" href="Template/css/template.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
-<link rel="stylesheet" href="Template/fonts/academicons-1.9.0/css/academicons.min.css"/>
-</link>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Sara Sottile, researcher in medical statistics, mathematical modelling and epidemiology.">
+  <title>About me | Sara Sottile</title>
+  <style>
+    :root {
+      --orange: #D36100;
+      --orange-dark: #A94D00;
+      --orange-pale: #FFF2E7;
+      --ink: #292724;
+      --muted: #706B65;
+      --line: #EAE5DF;
+      --paper: #FFFFFF;
+      --soft: #FAF8F5;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Arial, Helvetica, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--orange-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--orange); }
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,.96);
+    }
+    .nav-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 18px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .brand span { color: var(--orange); }
+    .nav-links { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
+    .nav-links a {
+      color: var(--muted);
+      font-size: .92rem;
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--orange-dark); }
+    .nav-links a[aria-current="page"] { font-weight: 700; }
+    .container { width: min(100% - 48px, 1040px); margin: 0 auto; }
+    .intro { padding: 76px 0 46px; }
+    .eyebrow {
+      color: var(--orange-dark);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      margin: 0 0 14px;
+    }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.2; }
+    h1 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -.04em; margin: 0 0 20px; }
+    h2 { font-size: clamp(1.65rem, 3vw, 2.2rem); margin: 0 0 18px; }
+    h3 { font-size: 1.25rem; margin: 0 0 8px; }
+    .lead { max-width: 780px; font-size: 1.12rem; color: #514C46; margin: 0; }
+    .accent-line { width: 62px; height: 3px; background: var(--orange); margin: 28px 0 0; }
+    .section { padding: 44px 0; border-top: 1px solid var(--line); }
+    .section-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 64px; }
+    .section-label { color: var(--orange-dark); text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; font-weight: 700; margin: 6px 0 0; }
+    .section-content p { margin: 0 0 16px; }
+    .section-content p:last-child { margin-bottom: 0; }
+    .interest-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 22px; }
+    .interest {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .interest h3 { font-size: 1.12rem; }
+    .interest p { color: var(--muted); font-size: .94rem; margin: 0; }
+    .timeline { border-left: 2px solid #F1D5BE; padding-left: 24px; margin: 4px 0 0 5px; }
+    .timeline-item { position: relative; padding: 0 0 25px; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-item::before {
+      content: ""; position: absolute; left: -31px; top: 8px;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--orange); box-shadow: 0 0 0 4px var(--orange-pale);
+    }
+    .timeline-date { color: var(--orange-dark); font-size: .8rem; font-weight: 700; margin: 0 0 4px !important; }
+    .timeline-item p { color: var(--muted); font-size: .95rem; margin: 0; }
+    .cv-panel {
+      background: var(--orange-pale);
+      border: 1px solid #F4D9C4;
+      border-radius: 16px;
+      padding: 28px 30px;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .cv-panel p { margin: 0; color: #62574D; }
+    .cv-link {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 11px 17px; border-radius: 7px;
+      background: var(--orange); color: white; text-decoration: none;
+      font-size: .92rem; font-weight: 700; white-space: nowrap;
+    }
+    .cv-link:hover { background: var(--orange-dark); color: white; }
+    .site-footer { margin-top: 36px; border-top: 1px solid var(--line); }
+    .footer-inner {
+      max-width: 1040px; margin: 0 auto; padding: 24px;
+      display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      color: var(--muted); font-size: .86rem;
+    }
+    @media (max-width: 720px) {
+      .nav-wrap { align-items: flex-start; flex-direction: column; gap: 12px; padding: 16px 22px; }
+      .nav-links { gap: 18px; }
+      .container { width: min(100% - 36px, 1040px); }
+      .intro { padding: 54px 0 34px; }
+      .section { padding: 32px 0; }
+      .section-grid { grid-template-columns: 1fr; gap: 14px; }
+      .interest-grid { grid-template-columns: 1fr; }
+      .cv-panel { align-items: flex-start; flex-direction: column; padding: 23px; }
+      .footer-inner { padding: 22px 18px; }
+    }
+  </style>
 </head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Sara <span>Sottile</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="cv.html" aria-current="page">About me</a>
+        <a href="pubbl.html">Publications</a>
+        <a href="news.html">News</a>
+      </nav>
+    </div>
+  </header>
 
-<body data-spy="scroll" data-target=".navbar-collapse">
+  <main>
+    <section class="intro">
+      <div class="container">
+        <p class="eyebrow">About me</p>
+        <h1>Mathematics, statistics<br>and public health.</h1>
+        <p class="lead">
+          I am a quantitative researcher working at the intersection of medical statistics,
+          mathematical modelling and epidemiology. My work combines mathematical and
+          statistical methods to investigate complex health processes, analyse clinical and
+          population-level data, and support evidence-informed public health decisions.
+        </p>
+        <div class="accent-line"></div>
+      </div>
+    </section>
 
-<div class="preloader">
-	<div class="sk-spinner sk-spinner-wordpress">
-       <span class="sk-inner-circle"></span>
-     </div>
-</div>
-	
+    <section class="section">
+      <div class="container section-grid">
+        <p class="section-label">Research profile</p>
+        <div class="section-content">
+          <h2>From mathematical theory to health applications</h2>
+          <p>
+            My background is in mathematics, with a PhD focused on mathematical modelling
+            of epidemics. This work involved theoretical analysis, network models and
+            applications to real epidemiological data, including systems evolving on
+            multiple time scales.
+          </p>
+          <p>
+            Over time, my research has expanded across complementary areas: epidemic
+            dynamics on networks, the spread of information and misinformation, medical
+            statistics and clinical epidemiology, health technology assessment, and
+            mechanistic modelling in biomedical applications. I am particularly interested
+            in combining rigorous quantitative methods with questions that matter for
+            healthcare and public health.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<!-- HEADEAR -->
-<header>
-<section class="container">
-<div class = "menu">
-<a style="color:orange" class="current-page" href="index.html"> <span> Home </span> </a> &nbsp;&nbsp;&nbsp;&nbsp;
-<a style="color:orange" href="cv.html"> <span> About me </span> </a> &nbsp;&nbsp;&nbsp;&nbsp;
-<a style="color:orange" href="pubbl.html"> <span> Publications  </span> </a> &nbsp;&nbsp;&nbsp;&nbsp;
-</div>
-</section>
-</header>
+    <section class="section" id="projects">
+      <div class="container section-grid">
+        <p class="section-label">Selected projects</p>
+        <div class="section-content">
+          <h2>Research in practice</h2>
+          <p>
+            My work combines mathematical modelling, medical statistics and epidemiology.
+            These selected projects illustrate how quantitative methods can address
+            questions ranging from disease dynamics and clinical research to prevention
+            strategies and public health decisions.
+          </p>
+          <div class="interest-grid">
+            <article class="interest">
+              <h3>01 · Mathematical Modelling of Epidemics</h3>
+              <p>Analysis of epidemic models based on ordinary differential equations (ODEs), including multi-group systems, network and graph-based models, stability analysis and dynamics evolving on multiple time scales. My work also uses Geometric Singular Perturbation Theory (GSPT) to investigate the behaviour of complex dynamical systems.</p>
+            </article>
+            <article class="interest">
+              <h3>02 · International Cohort Studies: ACC, INHANCE and IESC3</h3>
+              <p>Coordination, data management, quality control, data harmonization and statistical analysis of international pooled datasets. Within the Asia Cohort Consortium (ACC), this included work on coffee and tea consumption and pancreatic cancer mortality.</p>
+            </article>
+            <article class="interest">
+              <h3>03 · Cardiovascular Prevention — FItPreV</h3>
+              <p>Statistical and epidemiological analysis of a randomised controlled pilot trial evaluating personalised cardiovascular prevention strategies and their potential implementation within the Italian National Health Service. Collaboration: Università Cattolica del Sacro Cuore.</p>
+            </article>
+            <article class="interest">
+              <h3>04 · Vaccine Evaluation and Health Technology Assessment</h3>
+              <p>Health Technology Assessment and cost-effectiveness analyses of influenza vaccination strategies, including economic evaluations for the Italian and Spanish contexts. Collaborations included VIHTALI, Evidera, CSL Seqirus and academic and public-health partners involved in vaccine evaluation.</p>
+            </article>
+            <article class="interest">
+              <h3>05 · ORCHESTRA: COVID-19 Vaccine Response</h3>
+              <p>Statistical analysis of immunological response and antibody kinetics following SARS-CoV-2 vaccination in healthcare workers, within the ORCHESTRA project.</p>
+            </article>
+            <article class="interest">
+              <h3>06 · Cervical Cancer Biopsy Decision Support</h3>
+              <p>Research collaboration with the University of Bologna and AIRC, developing an analytical framework combining principal component analysis (PCA), patient clustering and random-forest models to support risk-stratified biopsy decision-making.</p>
+            </article>
+            <article class="interest">
+              <h3>07 · Therapeutic Antibody Immunogenicity — COST Action ENOTTA</h3>
+              <p>Mechanistic mathematical modelling of therapeutic antibodies in chronic inflammatory diseases, including the effect of methotrexate on adalimumab immunogenicity in axial spondyloarthritis. This work is connected to the European COST Action ENOTTA (European Network on Optimising Treatment with Therapeutic Antibodies in Chronic Inflammatory Diseases).</p>
+            </article>
+            <article class="interest">
+              <h3>08 · Avian Influenza Transmission Networks</h3>
+              <p>Mathematical modelling of avian influenza transmission networks across poultry farms in Veneto and Lombardy. Collaboration: University of Trento and Istituto Zooprofilattico Sperimentale delle Venezie (IZSVe).</p>
+            </article>
+            <article class="interest">
+              <h3>09 · Wolbachia-Based Control of <em>Aedes albopictus</em></h3>
+              <p>Analysis of field data from releases of Wolbachia-infected male mosquitoes to assess fertility reduction in wild populations in Italy. Collaboration: Sapienza University of Rome, ENEA, University of Trento and FBK.</p>
+            </article>
+            <article class="interest">
+              <h3>10 · BRIC-2022-ID25: Return to Work After Liver Transplantation</h3>
+              <p>Statistical analysis of a patient dataset combining clinical data and interview data, within an interdisciplinary project investigating risk factors for unemployment and return to work among liver transplant recipients.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	
-<!-- SECTIONS -->	
-<section class="container">
-<div class="contact">
+    <section class="section">
+      <div class="container section-grid">
+        <p class="section-label">Academic path</p>
+        <div class="section-content">
+          <h2>Education and research experience</h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <p class="timeline-date">From 26 October 2026</p>
+              <h3>Tenure Track Assistant Professor (RTT) in Medical Statistics</h3>
+              <p>Department of Life Sciences, Health and Health Professions, Link Campus University.</p>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">April 2026 – present</p>
+              <h3>Research collaboration · Joint Action Prevent NCD</h3>
+              <p>Università Cattolica del Sacro Cuore, contributing to the European project on prevention strategies for non-communicable diseases.</p>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">September 2025 – February 2026</p>
+              <h3>Research collaboration · FItPreV</h3>
+              <p>Università Cattolica del Sacro Cuore, with statistical and epidemiological analyses for the personalised cardiovascular prevention project.</p>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">July 2025 – October 2026</p>
+              <h3>Research Fellow</h3>
+              <p>University of Bologna, Department of Medical and Surgical Sciences. Management and statistical analysis of large-scale cohort datasets for cancer epidemiology, including survival and longitudinal analyses.</p>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">March 2024 – March 2025</p>
+              <h3>Research Fellow</h3>
+              <p>University of Bologna, Department of Medical and Surgical Sciences. Statistical analysis of cohort datasets for cancer epidemiology, including data cleaning, survival analysis and epidemiological modelling.</p>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">February 2023 – March 2024</p>
+              <h3>Research Fellow</h3>
+              <p>University of Trento, studying epidemic models with multiple time scales, information and misinformation spreading, and behavioural dynamics.</p>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">2019 – 2023</p>
+              <h3>PhD in Mathematics</h3>
+              <p>University of Trento. Research on mathematical modelling of epidemics, including theoretical analysis, network models and real epidemiological data.</p>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">2017 – 2019</p>
+              <h3>MSc in Mathematics</h3>
+              <p>University of Turin, with a focus on mathematical modelling; graduated with honours (110/110 cum laude).</p>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">2014 – 2017</p>
+              <h3>BSc in Mathematics</h3>
+              <p>University of Bari “Aldo Moro”.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<h2> Research Positions</h2>
-<p> <li> July 2025-Present, Research Fellow on in Data manager and analyst - waterpipe use and cancer (AIRC) at University of Bologna, Department of Medical and Surgical Sciences.</li></p>
-Supervisor: Prof. <a style="color:orange" href="https://www.unibo.it/sitoweb/paolo.boffetta" target="_blank">Paolo Boffetta</a>.
-	<br>
-	
-<p> <li> Mar 2024-Mar 2025, Research Fellow on Data management and analysis for WP5 of Orchestra project at University of Bologna, Department of Medical and Surgical Sciences.</li></p>
-Supervisor: Prof. <a style="color:orange" href="https://www.unibo.it/sitoweb/paolo.boffetta" target="_blank">Paolo Boffetta</a>.
-	<br>
-	<p> <li>
-Feb 2023-Mar 2024, Research Fellow on Analysis of epidemic models at University of Trento, Department of Mathematics.</li></p>
+    <section class="section">
+      <div class="container section-grid">
+        <p class="section-label">Beyond research</p>
+        <div class="section-content">
+          <h2>Methods, collaboration and communication</h2>
+          <p>
+            My work draws on statistical analysis, mathematical modelling and computational
+            tools, including R, Stata, Python and MATLAB. I have contributed to collaborative
+            research across mathematics, epidemiology, clinical research and health economics,
+            and have presented my work at international conferences and scientific meetings.
+          </p>
+          <p>
+            I value interdisciplinary collaboration and the exchange between methodological
+            development and real-world health questions.
+          </p>
+        </div>
+      </div>
+    </section>
 
-Supervisor: Prof. <a style="color:orange" href="https://andrea-pugliese.maths.unitn.it/" target="_blank">Andrea Pugliese</a>.
-	
-<hr>
-<h2> Education </h2>
-<p><li> Ph.D. in Mathematics,<i><a style="color:orange" href="https://www.maths.unitn.it/" target="_blank"> University of Trento</a></i>, 2023.
-<br>	Research fellow on ``Mathematical models of epidemics", supervised by Prof. <a style="color:orange" href="https://andrea-pugliese.maths.unitn.it/" target="_blank">Andrea Pugliese</a>.
-<br>
-<p><li> M.Sc. in Mathematics, Modellistic Curriculum, <i><a style="color:orange" href="https://matematicalm.campusnet.unito.it/do/home.pl" target="_blank">University of Turin</a></i>, 2019.
-<br>
-During my master studies I spent one term abroad at the <a style="color:orange" href="https://uwaterloo.ca/applied-mathematics/" target="_blank"> Department of Applied Mathematics of University of Waterloo</a> (Ontario, Canada). Here I worked on my thesis, titled <i>"Epidemic Models: a Switch Control for Networks"</i>, under the supervision of Prof. <a style="color:orange" href="http://www.math.uwaterloo.ca/~xzliu/" target="_blank">Xinzhi Liu</a> and Prof. <a style="color:orange" href="https://matematicalm.campusnet.unito.it/do/docenti.pl/Show?_id=lfatiben#tab-profilo" target="_blank">Lorenzo Fatibene</a>.
-</li>
-<br>
-<p><li> B.Sc. in Mathematics, <i><a style="color:orange" href="https://www.dm.uniba.it/" target="_blank">University of Bari</a></i>, 2017.
-<br>
-<hr>
+    <section class="section">
+      <div class="container">
+        <div class="cv-panel">
+          <div>
+            <p class="eyebrow">Full curriculum vitae</p>
+            <h2>Would you like to know more?</h2>
+            <p>For a complete overview of my education, research experience, skills and publications, see my CV.</p>
+          </div>
+          <a class="cv-link" href="Files/CV.pdf" target="_blank" rel="noopener noreferrer">View CV (PDF) ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-</div>
-</section>
-	
-<!--  FOOTER -->
-<footer>
-<ul class="social-icons">
-<li><a href="https://github.com/SaraSottile" class="fab fa-github"></a> </li>
-<li><a href="https://www.linkedin.com/in/sarasottile/" class="fab fa-linkedin"></a></li>
-<li><a href="https://twitter.com/sara_sottile95" class="fab fa-twitter"></a></li>
-<li><a href="https://www.researchgate.net/profile/Sara_Sottile4" class="fab fa-researchgate"></a> </li>
-<li><a href="https://scholar.google.com/citations?user=kHBXtEEAAAAJ&hl=it" class="ai ai-google-scholar"></a></li>
-<li><a href="https://orcid.org/0000-0001-7810-2099" class="ai ai-orcid"></a></li>
-<li><a href="https://arxiv.org/search/?query=Sottile%2C+Sara&searchtype=author&abstracts=hide&order=-announced_date_first&size=50" class="ai ai-arxiv"></a></li>
-<li><a href="https://www.scopus.com/authid/detail.uri?authorId=57219591020" class="ai ai-scopus"></a></li>
-<li><a href="https://webapps.unitn.it/du/it/Persona/PER0221423/Curriculum" class="fas fa-university"></a></li>
-</div> </li>
-</ul>
-</footer>
-
-
-<!--  javascript js -->
-<script src="Template/js/jquery.js"></script>
-<script src="Template/js/bootstrap.min.js"></script>	
-<script src="Template/js/jquery.backstretch.min.js"></script> 
-<script src="Template/js/custom.js"></script>
-
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Sara Sottile</span>
+      <span>Medical Statistics · Mathematical Modelling · Epidemiology</span>
+    </div>
+  </footer>
 </body>
 </html>
