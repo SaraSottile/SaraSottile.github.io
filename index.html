@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sara Sottile — Research Fellow at the Department of Medical and Surgical Sciences, University of Bologna. Mathematical modelling and analysis in epidemiology and biology.">
+  <meta name="description" content="Sara Sottile — mathematician and medical statistics researcher working on mathematical modelling, epidemiology, clinical data analysis and Health Technology Assessment.">
   <meta name="theme-color" content="#ffffff">
-  <title>Sara Sottile | Research Fellow</title>
+  <title>Sara Sottile | Research & Medical Statistics</title>
   <style>
     :root {
+      /* Orange accent retained from the existing site */
       --accent: #D36100;
       --accent-dark: #A94D00;
       --accent-pale: #FFF2E7;
@@ -21,22 +22,18 @@
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--paper);
+      margin: 0; color: var(--ink); background: var(--paper);
       font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
+      font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased;
     }
     a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 4px; }
     a:hover { color: var(--accent); }
-    a:focus-visible, button:focus-visible { outline: 3px solid #F2B37E; outline-offset: 3px; }
+    a:focus-visible { outline: 3px solid #F2B37E; outline-offset: 3px; }
     .container { width: min(var(--max-width), calc(100% - 48px)); margin: 0 auto; }
-    .site-header { border-bottom: 1px solid var(--line); background: rgba(255,255,255,.96); }
+    .site-header { border-bottom: 1px solid var(--line); background: rgba(255,255,255,.97); }
     .nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { font-family: Georgia, "Times New Roman", serif; color: var(--accent-dark); font-size: 29px; text-decoration: none; letter-spacing: -.6px; white-space: nowrap; }
-    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links { display: flex; align-items: center; gap: 27px; }
     .nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; padding: 26px 0 23px; border-bottom: 3px solid transparent; }
     .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--accent-dark); border-bottom-color: var(--accent); }
     .hero { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: clamp(40px, 7vw, 86px); padding: 58px 0 62px; }
@@ -56,8 +53,8 @@
     .portrait-frame { position: relative; isolation: isolate; }
     .portrait-frame::before { content: ""; position: absolute; inset: 28px -16px -16px 28px; background: var(--accent-pale); z-index: -1; }
     .portrait { display: block; width: 100%; aspect-ratio: 4 / 4.2; object-fit: cover; object-position: center 35%; background: var(--soft); border: 1px solid var(--line); }
-    .info-grid { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 38px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 34px 0 38px; }
-    .info-block { display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-content: start; }
+    .info-grid { display: grid; grid-template-columns: 1.05fr 1fr 1fr; gap: 34px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 34px 0 38px; }
+    .info-block { display: grid; grid-template-columns: 44px 1fr; gap: 15px; align-content: start; }
     .icon-circle { width: 42px; height: 42px; border-radius: 50%; background: var(--accent-pale); color: var(--accent-dark); display: grid; place-items: center; font-size: 20px; }
     h2 { font-size: 25px; margin: 4px 0 14px; }
     h3 { font-size: 21px; margin: 0 0 10px; }
@@ -67,28 +64,31 @@
     .link-list a { font-weight: 600; text-decoration: none; }
     .link-list span { display: block; color: var(--muted); font-size: 13px; line-height: 1.5; }
     .contact-link { display: inline-block; overflow-wrap: anywhere; }
-    .social { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .social { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 17px; }
     .social a { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 50%; color: var(--accent-dark); font-size: 11px; font-weight: 800; text-decoration: none; }
     .social a:hover { background: var(--accent-pale); border-color: #E7B58D; }
-    .research-strip { padding: 42px 0 48px; }
-    .section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; margin-bottom: 22px; }
-    .section-heading h2 { margin: 0; font-size: 31px; }
+    .research-strip { padding: 44px 0 52px; }
+    .section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; margin-bottom: 25px; }
+    .section-heading h2 { margin: 0; font-size: 32px; }
     .section-heading p { margin: 0; color: var(--muted); font-size: 14px; }
-    .topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .topic { padding: 22px; border: 1px solid var(--line); border-radius: 5px; background: #fff; }
-    .topic .topic-number { color: var(--accent); font-size: 12px; letter-spacing: 1.4px; font-weight: 800; }
-    .topic h3 { margin: 10px 0 9px; }
-    .topic p { color: var(--muted); font-size: 14px; margin: 0; }
+    .topic-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .topic { padding: 23px 22px 24px; border: 1px solid var(--line); border-radius: 5px; background: #fff; transition: border-color .18s ease, transform .18s ease; }
+    .topic:hover { border-color: #E7B58D; transform: translateY(-2px); }
+    .topic-number { color: var(--accent); font-size: 11px; letter-spacing: 1.4px; font-weight: 800; }
+    .topic h3 { margin: 11px 0 10px; font-size: 22px; }
+    .topic p { color: var(--muted); font-size: 14px; line-height: 1.75; margin: 0 0 14px; }
+    .keywords { color: var(--accent-dark); font-size: 12px; line-height: 1.7; font-weight: 650; }
     .site-footer { background: var(--soft); border-top: 1px solid var(--line); }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; color: var(--muted); font-size: 13px; }
     .footer-inner p { margin: 0; }
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
       .nav-wrap { align-items: flex-start; flex-direction: column; padding: 17px 0 0; gap: 8px; }
       .nav-links { gap: 22px; width: 100%; overflow-x: auto; }
       .nav-links a { padding: 10px 0 13px; white-space: nowrap; }
       .hero { grid-template-columns: 1fr .78fr; gap: 34px; padding: 44px 0 50px; }
       .info-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
       .info-block:last-child { grid-column: 1 / -1; }
+      .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 620px) {
       .container { width: min(100% - 34px, var(--max-width)); }
@@ -104,7 +104,7 @@
       .info-grid { grid-template-columns: 1fr; gap: 27px; padding: 28px 0; }
       .info-block:last-child { grid-column: auto; }
       .topic-grid { grid-template-columns: 1fr; }
-      .research-strip { padding: 34px 0; }
+      .research-strip { padding: 35px 0; }
       .section-heading { display: block; }
       .section-heading p { margin-top: 8px; }
       .footer-inner { align-items: flex-start; flex-direction: column; gap: 7px; }
@@ -121,8 +121,6 @@
         <a href="cv.html">About me</a>
         <a href="#research">Research</a>
         <a href="pubbl.html">Publications</a>
-        <a href="Files/CV.pdf" target="_blank" rel="noopener">CV ↗</a>
-        <a href="#contacts">Contact</a>
       </nav>
     </div>
   </header>
@@ -130,17 +128,16 @@
   <main>
     <section class="container hero" aria-labelledby="page-title">
       <div class="hero-copy">
-        <p class="eyebrow">Research Fellow · University of Bologna</p>
+        <p class="eyebrow">Medical Statistics · Mathematical Modelling · Epidemiology</p>
         <h1 id="page-title">Sara Sottile</h1>
-        <p class="role">Department of Medical and Surgical Sciences</p>
-        <p class="affiliation">Alma Mater Studiorum — University of Bologna</p>
+        <p class="role">Tenure Track Assistant Professor (RTT) in Medical Statistics</p>
+        <p class="affiliation">Department of Life Sciences, Health and Health Professions · Link Campus University</p>
         <div class="accent-rule" aria-hidden="true"></div>
         <p class="intro">
-          I work on mathematical modelling and analysis in epidemiology and biology, with a focus on dynamical systems, multiple time-scale dynamics, and Geometric Singular Perturbation Theory (GSPT). My work also includes Health Technology Assessment (HTA), cost-effectiveness analyses of healthcare interventions, simulation models, and statistical analysis and forecasting in COVID-19 and cancer epidemiology.
+          I am a quantitative researcher working at the intersection of medical statistics, mathematical modelling and epidemiology. My research spans the mathematical analysis of epidemic processes, including network dynamics and the spread of information, as well as clinical and epidemiological data analysis, health technology assessment, and mechanistic modelling in biomedical applications.
         </p>
         <div class="actions">
           <a class="button button-primary" href="#research">Explore my research <span aria-hidden="true">→</span></a>
-          <a class="button button-secondary" href="pubbl.html">Publications</a>
         </div>
       </div>
       <div class="portrait-frame">
@@ -153,11 +150,11 @@
         <div class="icon-circle" aria-hidden="true">⌁</div>
         <div>
           <h2>Research interests</h2>
-          <p>Mathematical modelling in epidemiology and biology<br>
-            Dynamical systems and multiple time scales<br>
-            Geometric Singular Perturbation Theory<br>
-            Health Technology Assessment and cost-effectiveness<br>
-            Statistical analysis and forecasting</p>
+          <p>Mathematical and epidemic modelling<br>
+            Medical statistics and epidemiology<br>
+            Information and behavioural dynamics<br>
+            Health Technology Assessment<br>
+            Mechanistic biomedical modelling</p>
         </div>
       </div>
       <div class="info-block">
@@ -175,17 +172,18 @@
         <div class="icon-circle" aria-hidden="true">⌖</div>
         <div>
           <h2>Contact</h2>
-          <p><strong>Department of Medical and Surgical Sciences</strong><br>
-            University of Bologna<br>
-            <a href="https://www.unibo.it/uniboWeb/unibomappe/default.aspx?kml=%2fUniboWeb%2fStruct.kml%3fStrID%3d1291" target="_blank" rel="noopener">Via Massarenti 9, Bologna, Italy</a></p>
+          <p><strong>Department of Life Sciences, Health and Health Professions</strong><br>
+            Link Campus University</p>
           <p style="margin-top:12px"><a class="contact-link" href="mailto:sara.sottile4@unibo.it">sara.sottile4@unibo.it</a><br>
             <a class="contact-link" href="mailto:sarasottile8@gmail.com">sarasottile8@gmail.com</a></p>
           <div class="social" aria-label="Academic and social profiles">
             <a href="https://github.com/SaraSottile" aria-label="GitHub">GH</a>
             <a href="https://www.linkedin.com/in/sarasottile/" aria-label="LinkedIn">in</a>
+            <a href="https://twitter.com/sara_sottile95" aria-label="Twitter">X</a>
             <a href="https://www.researchgate.net/profile/Sara_Sottile4" aria-label="ResearchGate">RG</a>
             <a href="https://scholar.google.com/citations?user=kHBXtEEAAAAJ&amp;hl=it" aria-label="Google Scholar">GS</a>
             <a href="https://orcid.org/0000-0001-7810-2099" aria-label="ORCID">iD</a>
+            <a href="https://arxiv.org/search/?query=Sottile%2C+Sara&amp;searchtype=author&amp;abstracts=hide&amp;order=-announced_date_first&amp;size=50" aria-label="arXiv">arXiv</a>
             <a href="https://www.scopus.com/authid/detail.uri?authorId=57219591020" aria-label="Scopus">Sc</a>
           </div>
         </div>
@@ -194,24 +192,45 @@
 
     <section class="container research-strip" id="research" aria-labelledby="research-title">
       <div class="section-heading">
-        <h2 id="research-title">Research overview</h2>
-        <p>Mathematical and statistical methods for health-related challenges.</p>
+        <h2 id="research-title">Research Overview</h2>
+        <p>Research at the intersection of mathematical, statistical and biomedical sciences.</p>
       </div>
       <div class="topic-grid">
         <article class="topic">
-          <span class="topic-number">01 / MODELLING</span>
-          <h3>Dynamical systems</h3>
-          <p>Mathematical models for epidemiological and biological processes, including systems with multiple time scales.</p>
+          <span class="topic-number">01 / THEORY</span>
+          <h3>Mathematical Modelling &amp; Dynamical Systems</h3>
+          <p>Mathematical analysis of dynamical systems, stability, multiple time-scale dynamics and Geometric Singular Perturbation Theory.</p>
+          <div class="keywords">Dynamical systems · Stability analysis · GSPT</div>
         </article>
         <article class="topic">
-          <span class="topic-number">02 / HEALTH</span>
-          <h3>Health technology assessment</h3>
-          <p>Cost-effectiveness analysis of vaccines and healthcare interventions to inform health-related decisions.</p>
+          <span class="topic-number">02 / EPIDEMICS</span>
+          <h3>Epidemic Modelling, Information &amp; Behaviour</h3>
+          <p>Epidemic models on networks and graphs, information and misinformation spreading, and the role of behavioural dynamics in epidemic transmission.</p>
+          <div class="keywords">Network epidemiology · Information spreading · Behavioural dynamics</div>
         </article>
         <article class="topic">
-          <span class="topic-number">03 / DATA</span>
-          <h3>Statistics and forecasting</h3>
-          <p>Statistical analysis, simulation and forecasting in COVID-19 and cancer epidemiology.</p>
+          <span class="topic-number">03 / STATISTICS</span>
+          <h3>Medical Statistics &amp; Epidemiology</h3>
+          <p>Clinical and cohort data analysis, cancer and cardiovascular epidemiology, survival and longitudinal analysis, forecasting and risk prediction.</p>
+          <div class="keywords">Survival analysis · Longitudinal data · Risk prediction</div>
+        </article>
+        <article class="topic">
+          <span class="topic-number">04 / HEALTH ECONOMICS</span>
+          <h3>Health Technology Assessment</h3>
+          <p>Economic evaluation and cost-effectiveness analysis of healthcare interventions, with a particular focus on vaccination strategies.</p>
+          <div class="keywords">HTA · Cost-effectiveness · Vaccine evaluation</div>
+        </article>
+        <article class="topic">
+          <span class="topic-number">05 / BIOMEDICAL</span>
+          <h3>Mechanistic &amp; Biomedical Modelling</h3>
+          <p>Mechanistic mathematical models of drug interactions and therapeutic antibody immunogenicity in chronic inflammatory diseases.</p>
+          <div class="keywords">Mechanistic modelling · Drug interactions · Immunogenicity</div>
+        </article>
+        <article class="topic">
+          <span class="topic-number">06 / INFECTIOUS DISEASES</span>
+          <h3>Vector-Borne Diseases &amp; Transmission Networks</h3>
+          <p>Mathematical modelling and data analysis for vector-borne disease control, including Wolbachia-based strategies, and avian influenza transmission across poultry farms.</p>
+          <div class="keywords">Wolbachia · Aedes albopictus · Avian influenza</div>
         </article>
       </div>
     </section>
@@ -219,8 +238,8 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year">2026</span> Sara Sottile</p>
-      <p>Department of Medical and Surgical Sciences · University of Bologna</p>
+      <p>© 2026 Sara Sottile</p>
+      <p>Medical Statistics · Mathematical Modelling · Epidemiology</p>
     </div>
   </footer>
 </body>
