@@ -1,107 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- HEAD -->
 <head>
-<meta charset="utf-8">
-<title> Sara Sottile </title>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="">
-<meta name="description" content="">
-
-<!-- CSS FILES -->	
-<link rel="stylesheet" href="Template/css/bootstrap.min.css">
-<link rel="stylesheet" href="Template/css/template.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
-<link rel="stylesheet" href="Template/fonts/academicons-1.9.0/css/academicons.min.css"/>
-</link>
-<meta name="google-site-verification" content="ro1rQ4mnzztju20DGGz3SawloNuHRT-XEvfmwg4vty4" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sara Sottile — Research Fellow at the Department of Medical and Surgical Sciences, University of Bologna. Mathematical modelling and analysis in epidemiology and biology.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Sara Sottile | Research Fellow</title>
+  <style>
+    :root {
+      --accent: #D36100;
+      --accent-dark: #A94D00;
+      --accent-pale: #FFF2E7;
+      --ink: #242424;
+      --muted: #66666B;
+      --line: #E8E5E1;
+      --paper: #FFFFFF;
+      --soft: #FAF8F5;
+      --max-width: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    a:hover { color: var(--accent); }
+    a:focus-visible, button:focus-visible { outline: 3px solid #F2B37E; outline-offset: 3px; }
+    .container { width: min(var(--max-width), calc(100% - 48px)); margin: 0 auto; }
+    .site-header { border-bottom: 1px solid var(--line); background: rgba(255,255,255,.96); }
+    .nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-family: Georgia, "Times New Roman", serif; color: var(--accent-dark); font-size: 29px; text-decoration: none; letter-spacing: -.6px; white-space: nowrap; }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; padding: 26px 0 23px; border-bottom: 3px solid transparent; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--accent-dark); border-bottom-color: var(--accent); }
+    .hero { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: clamp(40px, 7vw, 86px); padding: 58px 0 62px; }
+    .eyebrow { margin: 0 0 14px; color: var(--accent-dark); text-transform: uppercase; letter-spacing: 2px; font-size: 12px; font-weight: 750; }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; line-height: 1.15; }
+    h1 { font-size: clamp(42px, 5.2vw, 68px); letter-spacing: -1.6px; margin: 0 0 12px; }
+    .role { font-family: Georgia, "Times New Roman", serif; font-size: clamp(20px, 2vw, 25px); line-height: 1.35; margin: 0; }
+    .affiliation { color: var(--muted); margin: 5px 0 0; }
+    .accent-rule { height: 3px; width: 56px; background: var(--accent); margin: 24px 0; }
+    .intro { color: #4B4B50; max-width: 620px; font-size: 16px; line-height: 1.85; margin: 0 0 25px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button { display: inline-flex; justify-content: center; align-items: center; gap: 10px; min-height: 46px; padding: 10px 19px; border: 1px solid var(--accent); border-radius: 4px; font-weight: 650; text-decoration: none; transition: background .18s ease, color .18s ease, transform .18s ease; }
+    .button-primary { color: white; background: var(--accent); }
+    .button-primary:hover { color: white; background: var(--accent-dark); transform: translateY(-1px); }
+    .button-secondary { color: var(--accent-dark); background: white; }
+    .button-secondary:hover { background: var(--accent-pale); }
+    .portrait-frame { position: relative; isolation: isolate; }
+    .portrait-frame::before { content: ""; position: absolute; inset: 28px -16px -16px 28px; background: var(--accent-pale); z-index: -1; }
+    .portrait { display: block; width: 100%; aspect-ratio: 4 / 4.2; object-fit: cover; object-position: center 35%; background: var(--soft); border: 1px solid var(--line); }
+    .info-grid { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 38px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 34px 0 38px; }
+    .info-block { display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-content: start; }
+    .icon-circle { width: 42px; height: 42px; border-radius: 50%; background: var(--accent-pale); color: var(--accent-dark); display: grid; place-items: center; font-size: 20px; }
+    h2 { font-size: 25px; margin: 4px 0 14px; }
+    h3 { font-size: 21px; margin: 0 0 10px; }
+    .info-block p { color: #55555A; margin: 0; font-size: 14px; line-height: 1.8; }
+    .link-list { list-style: none; margin: 0; padding: 0; }
+    .link-list li + li { margin-top: 10px; }
+    .link-list a { font-weight: 600; text-decoration: none; }
+    .link-list span { display: block; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .contact-link { display: inline-block; overflow-wrap: anywhere; }
+    .social { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .social a { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 50%; color: var(--accent-dark); font-size: 11px; font-weight: 800; text-decoration: none; }
+    .social a:hover { background: var(--accent-pale); border-color: #E7B58D; }
+    .research-strip { padding: 42px 0 48px; }
+    .section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; margin-bottom: 22px; }
+    .section-heading h2 { margin: 0; font-size: 31px; }
+    .section-heading p { margin: 0; color: var(--muted); font-size: 14px; }
+    .topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .topic { padding: 22px; border: 1px solid var(--line); border-radius: 5px; background: #fff; }
+    .topic .topic-number { color: var(--accent); font-size: 12px; letter-spacing: 1.4px; font-weight: 800; }
+    .topic h3 { margin: 10px 0 9px; }
+    .topic p { color: var(--muted); font-size: 14px; margin: 0; }
+    .site-footer { background: var(--soft); border-top: 1px solid var(--line); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; color: var(--muted); font-size: 13px; }
+    .footer-inner p { margin: 0; }
+    @media (max-width: 850px) {
+      .nav-wrap { align-items: flex-start; flex-direction: column; padding: 17px 0 0; gap: 8px; }
+      .nav-links { gap: 22px; width: 100%; overflow-x: auto; }
+      .nav-links a { padding: 10px 0 13px; white-space: nowrap; }
+      .hero { grid-template-columns: 1fr .78fr; gap: 34px; padding: 44px 0 50px; }
+      .info-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+      .info-block:last-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(100% - 34px, var(--max-width)); }
+      .brand { font-size: 27px; }
+      .nav-links { gap: 19px; }
+      .nav-links a { font-size: 13px; }
+      .hero { grid-template-columns: 1fr; padding: 35px 0 42px; gap: 30px; }
+      .hero-copy { order: 1; }
+      .portrait-frame { order: 0; max-width: 390px; width: 88%; margin: 0 auto 8px; }
+      .portrait { aspect-ratio: 5 / 4; }
+      .portrait-frame::before { inset: 14px -9px -9px 14px; }
+      .intro { font-size: 15px; }
+      .info-grid { grid-template-columns: 1fr; gap: 27px; padding: 28px 0; }
+      .info-block:last-child { grid-column: auto; }
+      .topic-grid { grid-template-columns: 1fr; }
+      .research-strip { padding: 34px 0; }
+      .section-heading { display: block; }
+      .section-heading p { margin-top: 8px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; gap: 7px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+  </style>
 </head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Sara Sottile, home">Sara Sottile</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="cv.html">About me</a>
+        <a href="#research">Research</a>
+        <a href="pubbl.html">Publications</a>
+        <a href="Files/CV.pdf" target="_blank" rel="noopener">CV ↗</a>
+        <a href="#contacts">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<body data-spy="scroll" data-target=".navbar-collapse">
+  <main>
+    <section class="container hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Research Fellow · University of Bologna</p>
+        <h1 id="page-title">Sara Sottile</h1>
+        <p class="role">Department of Medical and Surgical Sciences</p>
+        <p class="affiliation">Alma Mater Studiorum — University of Bologna</p>
+        <div class="accent-rule" aria-hidden="true"></div>
+        <p class="intro">
+          I work on mathematical modelling and analysis in epidemiology and biology, with a focus on dynamical systems, multiple time-scale dynamics, and Geometric Singular Perturbation Theory (GSPT). My work also includes Health Technology Assessment (HTA), cost-effectiveness analyses of healthcare interventions, simulation models, and statistical analysis and forecasting in COVID-19 and cancer epidemiology.
+        </p>
+        <div class="actions">
+          <a class="button button-primary" href="#research">Explore my research <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="pubbl.html">Publications</a>
+        </div>
+      </div>
+      <div class="portrait-frame">
+        <img class="portrait" src="Files/foto.jpg" alt="Portrait of Sara Sottile" width="600" height="630">
+      </div>
+    </section>
 
-<div class="preloader">
-	<div class="sk-spinner sk-spinner-wordpress">
-       <span class="sk-inner-circle"></span>
-     </div>
-</div>
+    <section class="container info-grid" aria-label="Quick information">
+      <div class="info-block">
+        <div class="icon-circle" aria-hidden="true">⌁</div>
+        <div>
+          <h2>Research interests</h2>
+          <p>Mathematical modelling in epidemiology and biology<br>
+            Dynamical systems and multiple time scales<br>
+            Geometric Singular Perturbation Theory<br>
+            Health Technology Assessment and cost-effectiveness<br>
+            Statistical analysis and forecasting</p>
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="icon-circle" aria-hidden="true">↗</div>
+        <div>
+          <h2>Explore</h2>
+          <ul class="link-list">
+            <li><a href="cv.html">About me →</a><span>Background and academic profile</span></li>
+            <li><a href="pubbl.html">Publications →</a><span>Scientific publications and research output</span></li>
+            <li><a href="Files/CV.pdf" target="_blank" rel="noopener">Curriculum Vitae →</a><span>Open CV (PDF)</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="info-block" id="contacts">
+        <div class="icon-circle" aria-hidden="true">⌖</div>
+        <div>
+          <h2>Contact</h2>
+          <p><strong>Department of Medical and Surgical Sciences</strong><br>
+            University of Bologna<br>
+            <a href="https://www.unibo.it/uniboWeb/unibomappe/default.aspx?kml=%2fUniboWeb%2fStruct.kml%3fStrID%3d1291" target="_blank" rel="noopener">Via Massarenti 9, Bologna, Italy</a></p>
+          <p style="margin-top:12px"><a class="contact-link" href="mailto:sara.sottile4@unibo.it">sara.sottile4@unibo.it</a><br>
+            <a class="contact-link" href="mailto:sarasottile8@gmail.com">sarasottile8@gmail.com</a></p>
+          <div class="social" aria-label="Academic and social profiles">
+            <a href="https://github.com/SaraSottile" aria-label="GitHub">GH</a>
+            <a href="https://www.linkedin.com/in/sarasottile/" aria-label="LinkedIn">in</a>
+            <a href="https://twitter.com/sara_sottile95" aria-label="Twitter">X</a>
+            <a href="https://www.researchgate.net/profile/Sara_Sottile4" aria-label="ResearchGate">RG</a>
+            <a href="https://scholar.google.com/citations?user=kHBXtEEAAAAJ&amp;hl=it" aria-label="Google Scholar">GS</a>
+            <a href="https://orcid.org/0000-0001-7810-2099" aria-label="ORCID">iD</a>
+            <a href="https://arxiv.org/search/?query=Sottile%2C+Sara&amp;searchtype=author&amp;abstracts=hide&amp;order=-announced_date_first&amp;size=50" aria-label="arXiv">arXiv</a>
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=57219591020" aria-label="Scopus">Sc</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- HEADEAR -->
-<header>
-<section class="container">
-<div class = "menu">
-<a style="color:orange" class="current-page" href="index.html"> <span> Home </span> </a> &nbsp;&nbsp;&nbsp;&nbsp;
-<a style="color:orange" href="cv.html"> <span> About me </span> </a> &nbsp;&nbsp;&nbsp;&nbsp;
-<a style="color:orange" href="pubbl.html"> <span> Publications </span> </a> &nbsp;&nbsp;&nbsp;&nbsp;
-</div>
-</section>
-</header>
+    <section class="container research-strip" id="research" aria-labelledby="research-title">
+      <div class="section-heading">
+        <h2 id="research-title">Research overview</h2>
+        <p>Mathematical and statistical methods for health-related challenges.</p>
+      </div>
+      <div class="topic-grid">
+        <article class="topic">
+          <span class="topic-number">01 / MODELLING</span>
+          <h3>Dynamical systems</h3>
+          <p>Mathematical models for epidemiological and biological processes, including systems with multiple time scales.</p>
+        </article>
+        <article class="topic">
+          <span class="topic-number">02 / HEALTH</span>
+          <h3>Health technology assessment</h3>
+          <p>Cost-effectiveness analysis of vaccines and healthcare interventions to inform health-related decisions.</p>
+        </article>
+        <article class="topic">
+          <span class="topic-number">03 / DATA</span>
+          <h3>Statistics and forecasting</h3>
+          <p>Statistical analysis, simulation and forecasting in COVID-19 and cancer epidemiology.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-
-<!-- SECTIONS -->	
-<section class="container">
-<div class="row">
-
-<div class="col-md-4 col-sm-12">
-<div class="contact">
-<center>
-	<h4 class="tm-title bold">Sara Sottile</h4>
-<h6> Research Fellowship </h6>
-<h6 class="black">Dept. of Medical and Surgical Sciences - University of Bologna </h6>	
-<img src="Files/foto.jpg" alt="Avatar" class="avatar">
-</center>
-</div>
-</div>
-
-
-<div class="col-md-4 col-sm-12">
-<div class="contact">
-<center>	
-Mathematical modeling and analysis in epidemiology and biology, with a focus on dynamical systems, multiple time scale dynamics, and Geometric Singular Perturbation Theory (GSPT). Expertise in Health Technology Assessment (HTA) for vaccines, cost-effectiveness analyses of healthcare interventions and conceptualizing and implementing simulation models; statistical analysis and forecasting in COVID-19 and cancer epidemiology. Passionate about applying mathematical and statistical tools to health-related challenges, combining precision and interdisciplinary approaches.
-</center>
-</div>
-</div>
-
-
-<div class="col-md-4 col-sm-12">
-<div class="contact">
-<h2>Contacts</h2>
-<p><i class="fa fa-map-marker"></i><a  style="color:black" href="https://www.unibo.it/uniboWeb/unibomappe/default.aspx?kml=%2fUniboWeb%2fStruct.kml%3fStrID%3d1291"> Via Massarenti 9, Bologna (Italy)</a> </p>
-<p><i class="fa fa-envelope"></i>   sara.sottile4@unibo.it </p>
-<p><i class="fa fa-envelope"></i>   sarasottile8@gmail.com </p>
-<hr>For further information: <a style="color:orange" href="Files/CV.pdf" target="_blank">Curriculum Vitae</a> (last update: 10/07/2025).
-</div>
-</div>
-			
-</div>
-
-</section>
-	
-<!--  FOOTER -->
-<footer>
-<ul class="social-icons">
-<li><a href="https://github.com/SaraSottile" class="fab fa-github"></a> </li>
-<li><a href="https://www.linkedin.com/in/sarasottile/" class="fab fa-linkedin"></a></li>
-<li><a href="https://twitter.com/sara_sottile95" class="fab fa-twitter"></a></li>
-<li><a href="https://www.researchgate.net/profile/Sara_Sottile4" class="fab fa-researchgate"></a> </li>
-<li><a href="https://scholar.google.com/citations?user=kHBXtEEAAAAJ&hl=it" class="ai ai-google-scholar"></a></li>
-<li><a href="https://orcid.org/0000-0001-7810-2099" class="ai ai-orcid"></a></li>
-<li><a href="https://arxiv.org/search/?query=Sottile%2C+Sara&searchtype=author&abstracts=hide&order=-announced_date_first&size=50" class="ai ai-arxiv"></a></li>
-<li><a href="https://www.scopus.com/authid/detail.uri?authorId=57219591020" class="ai ai-scopus"></a></li>
-<li><a href="https://webapps.unitn.it/du/it/Persona/PER0221423/Curriculum" class="fas fa-university"></a></li>
-</div> </li>
-</ul>
-</br>
-<a href="http://s04.flagcounter.com/more/ai"><img src="https://s04.flagcounter.com/count/ai/bg_FFFFFF/txt_D36100/border_F7C460/columns_2/maxflags_8/viewers_3/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
-</footer>
-
-
-<!--  javascript js -->
-<script src="Template/js/jquery.js"></script>
-<script src="Template/js/bootstrap.min.js"></script>	
-<script src="Template/js/jquery.backstretch.min.js"></script> 
-<script src="Template/js/custom.js"></script>
-
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Sara Sottile</p>
+      <p>Department of Medical and Surgical Sciences · University of Bologna</p>
+    </div>
+  </footer>
 </body>
 </html>
