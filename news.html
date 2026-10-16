@@ -7,20 +7,64 @@
   <meta name="theme-color" content="#ffffff">
   <title>News | Sara Sottile</title>
   <style>
-    :root { --accent:#D36100; --accent-dark:#A94D00; --accent-pale:#FFF2E7; --ink:#242424; --muted:#66666B; --line:#E8E5E1; --paper:#FFFFFF; --soft:#FAF8F5; --max-width:1120px; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; color:var(--ink); background:var(--paper); font-family:Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.7; -webkit-font-smoothing:antialiased; }
-    a { color:var(--accent-dark); text-decoration-thickness:1px; text-underline-offset:4px; }
-    a:hover { color:var(--accent); }
-    a:focus-visible { outline:3px solid #F2B37E; outline-offset:3px; }
-    .container { width:min(var(--max-width),calc(100% - 48px)); margin:0 auto; }
-    .site-header { border-bottom:1px solid var(--line); background:rgba(255,255,255,.97); }
-    .nav-wrap { min-height:52px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
-    .brand { font-family:Georgia,"Times New Roman",serif; color:var(--accent-dark); font-size:25px; text-decoration:none; letter-spacing:-.6px; white-space:nowrap; }
-    .nav-links { display:flex; align-items:center; gap:23px; }
-    .nav-links a { color:var(--ink); text-decoration:none; font-size:12px; padding:14px 0 13px; border-bottom:2px solid transparent; white-space:nowrap; }
-    .nav-links a:hover,.nav-links a[aria-current="page"] { color:var(--accent-dark); border-bottom-color:var(--accent); }
+    :root {
+  --accent: #D36100;
+  --accent-dark: #A94D00;
+  --accent-pale: #FFF2E7;
+  --ink: #242424;
+  --muted: #66666B;
+  --line: #E8E5E1;
+  --paper: #FFFFFF;
+  --soft: #FAF8F5;
+  --max-width: 1120px;
+}
+
+.container {
+  width: min(var(--max-width), calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,.97);
+}
+
+.nav-wrap {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--accent-dark);
+  font-size: 29px;
+  text-decoration: none;
+  letter-spacing: -.6px;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.nav-links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 26px 0 23px;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: var(--accent-dark);
+  border-bottom-color: var(--accent);
+}
     h1,h2,h3 { font-family:Georgia,"Times New Roman",serif; font-weight:400; line-height:1.15; }
     .page-intro { padding:66px 0 34px; max-width:760px; }
     .eyebrow { margin:0 0 14px; color:var(--accent-dark); text-transform:uppercase; letter-spacing:2px; font-size:12px; font-weight:750; }
