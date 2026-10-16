@@ -1,87 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- HEAD -->
 <head>
-<meta charset="utf-8">
-<title> Sara Sottile </title>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="">
-<meta name="description" content="">
-
-<!-- CSS FILES -->	
-<link rel="stylesheet" href="Template/css/bootstrap.min.css">
-<link rel="stylesheet" href="Template/css/template.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
-<link rel="stylesheet" href="Template/fonts/academicons-1.9.0/css/academicons.min.css"/>
-</link>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="News and updates from Sara Sottile, including publications, research events, and academic appointments.">
+  <meta name="theme-color" content="#ffffff">
+  <title>News | Sara Sottile</title>
+  <style>
+    :root { --accent:#D36100; --accent-dark:#A94D00; --accent-pale:#FFF2E7; --ink:#242424; --muted:#66666B; --line:#E8E5E1; --paper:#FFFFFF; --soft:#FAF8F5; --max-width:1120px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.7; -webkit-font-smoothing:antialiased; }
+    a { color:var(--accent-dark); text-decoration-thickness:1px; text-underline-offset:4px; }
+    a:hover { color:var(--accent); }
+    a:focus-visible { outline:3px solid #F2B37E; outline-offset:3px; }
+    .container { width:min(var(--max-width),calc(100% - 48px)); margin:0 auto; }
+    .site-header { border-bottom:1px solid var(--line); background:rgba(255,255,255,.97); }
+    .nav-wrap { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { font-family:Georgia,"Times New Roman",serif; color:var(--accent-dark); font-size:29px; text-decoration:none; letter-spacing:-.6px; white-space:nowrap; }
+    .nav-links { display:flex; align-items:center; gap:27px; }
+    .nav-links a { color:var(--ink); text-decoration:none; font-size:14px; padding:26px 0 23px; border-bottom:3px solid transparent; }
+    .nav-links a:hover,.nav-links a[aria-current="page"] { color:var(--accent-dark); border-bottom-color:var(--accent); }
+    h1,h2,h3 { font-family:Georgia,"Times New Roman",serif; font-weight:400; line-height:1.15; }
+    .page-intro { padding:66px 0 34px; max-width:760px; }
+    .eyebrow { margin:0 0 14px; color:var(--accent-dark); text-transform:uppercase; letter-spacing:2px; font-size:12px; font-weight:750; }
+    h1 { font-size:clamp(42px,5.2vw,64px); letter-spacing:-1.5px; margin:0 0 18px; }
+    .lead { color:#55555A; font-size:17px; line-height:1.8; margin:0; }
+    .accent-rule { height:3px; width:56px; background:var(--accent); margin:25px 0 0; }
+    .news-list { padding:8px 0 76px; max-width:850px; }
+    .news-item { display:grid; grid-template-columns:145px minmax(0,1fr); gap:30px; padding:30px 0 32px; border-top:1px solid var(--line); }
+    .news-date { color:var(--accent-dark); font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:1.3px; padding-top:5px; }
+    .news-item h2 { font-size:clamp(23px,3vw,29px); margin:0 0 12px; }
+    .news-item p { color:#55555A; margin:0 0 12px; }
+    .news-item p:last-child { margin-bottom:0; }
+    .tag { display:inline-block; margin-bottom:11px; padding:3px 9px; border:1px solid #E7B58D; border-radius:3px; color:var(--accent-dark); background:var(--accent-pale); font-size:11px; font-weight:750; letter-spacing:.6px; text-transform:uppercase; }
+    .site-footer { background:var(--soft); border-top:1px solid var(--line); }
+    .footer-inner { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 0; color:var(--muted); font-size:13px; }
+    .footer-inner p { margin:0; }
+    @media(max-width:700px) { .container { width:min(var(--max-width),calc(100% - 34px)); } .nav-wrap { padding:14px 0 0; align-items:flex-start; flex-direction:column; gap:5px; } .nav-links { gap:22px; width:100%; overflow-x:auto; } .nav-links a { padding:10px 0 13px; white-space:nowrap; } .page-intro { padding:48px 0 28px; } .news-item { grid-template-columns:1fr; gap:7px; padding:25px 0 28px; } .news-date { padding-top:0; } .footer-inner { align-items:flex-start; flex-direction:column; gap:7px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; } }
+  </style>
 </head>
-
-<body data-spy="scroll" data-target=".navbar-collapse">
-
-<div class="preloader">
-	<div class="sk-spinner sk-spinner-wordpress">
-       <span class="sk-inner-circle"></span>
-     </div>
-</div>
-	
-
-<!-- HEADEAR -->
-<header>
-<section class="container">
-<div class = "menu">
-<a style="color:orange" class="current-page" href="index.html"> <span> Home </span> </a> &nbsp;&nbsp;&nbsp;&nbsp;
-<a style="color:orange" href="cv.html"> <span> About me </span> </a> &nbsp;&nbsp;&nbsp;&nbsp;
-<a style="color:orange" href="pubbl.html"> <span> Publications & Preprints  </span> </a> &nbsp;&nbsp;&nbsp;&nbsp;
-<a style="color:orange" href="others.html"> <span> Others </span> </a> &nbsp;&nbsp;&nbsp;&nbsp;
-</div>
-</section>
-</header>
-
-	
-<!-- SECTIONS -->	
-<section class="container">
-<div class="contact">
-
-
-	
-
-I was one of the organizers, in collaboration with <a style="color:orange" href="https://webapps.unitn.it/du/it/Persona/PER0203207/Didattica" target="_blank">Federico Fallucca</a> and <a style="color:orange" href="https://webapps.unitn.it/du/it/Persona/PER0177246/Curriculum" target="_blank">Enrico Savi</a>, of the periodic seminars of “Doc in Progress” at the Department of Mathematics of University of Trento. As the name suggests, the speakers are chosen from among currently PhD students in Mathematics or related fields. 
-<br>
-For further information, visit the web page of the project here: <a style="color:orange" href="https://docinprogressunitn.wordpress.com/" target="_blank">Doc in Progress</a>. 
-<hr>
-<br>
-I helped with the organization of both the <a style="color:orange" href="https://webmagazine.unitn.it/en/evento/drmath/90585/phd-opening-2021" target="_blank">“PhD Opening Day 2021”</a> and <a style="color:orange" href="https://webmagazine.unitn.it/en/evento/drmath/104217/phd-opening-2022" target="_blank">“PhD Opening Day 2022”</a>.
-<hr>
-<br>
-	
-Moreover, I was the PhD student representative for my department and a member of the “Open Science Commission” of the University of Trento.
-</div>
-	</section>
-	
-<!--  FOOTER -->
-<footer>
-<ul class="social-icons">
-<li><a href="https://github.com/SaraSottile" class="fab fa-github"></a> </li>
-<li><a href="https://www.linkedin.com/in/sarasottile/" class="fab fa-linkedin"></a></li>
-<li><a href="https://twitter.com/sara_sottile95" class="fab fa-twitter"></a></li>
-<li><a href="https://www.researchgate.net/profile/Sara_Sottile4" class="fab fa-researchgate"></a> </li>
-<li><a href="https://scholar.google.com/citations?user=kHBXtEEAAAAJ&hl=it" class="ai ai-google-scholar"></a></li>
-<li><a href="https://orcid.org/0000-0001-7810-2099" class="ai ai-orcid"></a></li>
-	<li><a href="https://arxiv.org/search/?query=Sottile%2C+Sara&searchtype=author&abstracts=hide&order=-announced_date_first&size=50" class="ai ai-arxiv"></a></li>
-<li><a href="https://www.scopus.com/authid/detail.uri?authorId=57219591020" class="ai ai-scopus"></a></li>
-<li><a href="https://webapps.unitn.it/du/it/Persona/PER0221423/Curriculum" class="fas fa-university"></a></li>
-</div> </li>
-</ul>
-</footer>
-
-
-<!--  javascript js -->
-<script src="Template/js/jquery.js"></script>
-<script src="Template/js/bootstrap.min.js"></script>	
-<script src="Template/js/jquery.backstretch.min.js"></script> 
-<script src="Template/js/custom.js"></script>
-
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Sara Sottile, home">Sara Sottile</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="cv.html">About me</a>
+        <a href="pubbl.html">Publications</a>
+        <a href="news.html" aria-current="page">News</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="container page-intro" aria-labelledby="page-title">
+      <p class="eyebrow">Updates · Publications · Events</p>
+      <h1 id="page-title">News</h1>
+      <p class="lead">Selected updates on my research, scientific activities, and academic career.</p>
+      <div class="accent-rule" aria-hidden="true"></div>
+    </section>
+    <section class="container news-list" aria-label="News items">
+      <article class="news-item">
+        <div class="news-date"><time datetime="2026-10-26">26 October 2026</time></div>
+        <div>
+          <span class="tag">Academic appointment</span>
+          <h2>Joining Link Campus University</h2>
+          <p>I will join the Department of Life Sciences, Health and Health Professions at Link Campus University as a Tenure Track Assistant Professor (RTT) in Medical Statistics.</p>
+        </div>
+      </article>
+      <article class="news-item">
+        <div class="news-date"><time datetime="2026-10-08">8–9 October 2026</time></div>
+        <div>
+          <span class="tag">Workshop</span>
+          <h2>Across Generations in Mathematical Biology</h2>
+          <p>I attended the <em>Across Generations in Mathematical Biology</em> workshop, held in Trento, Italy, on 8–9 October 2026. The workshop brought together established researchers and early-career scientists to exchange ideas at the intersection of mathematics, biology, and data science.</p>
+          <p><a href="https://sites.google.com/unitn.it/genmbtrento/" target="_blank" rel="noopener noreferrer">Workshop website</a></p>
+        </div>
+      </article>
+      <article class="news-item">
+        <div class="news-date"><time datetime="2026-09-21">21 September 2026</time></div>
+        <div>
+          <span class="tag">Publication</span>
+          <h2>New paper in <em>PLOS Computational Biology</em></h2>
+          <p>Our paper, “Methotrexate’s effect on cells and adalimumab immunogenicity in axial spondyloarthritis: A mathematical study,” was published in <em>PLOS Computational Biology</em>.</p>
+          <p>The study develops a mathematical model to investigate how methotrexate may affect the immune response to adalimumab in axial spondyloarthritis.</p>
+          <p><a href="https://doi.org/10.1371/journal.pcbi.1014740" target="_blank" rel="noopener noreferrer">Read the article</a></p>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Sara Sottile</p>
+      <p>Medical Statistics · Mathematical Modeling · Epidemiology</p>
+    </div>
+  </footer>
 </body>
 </html>
