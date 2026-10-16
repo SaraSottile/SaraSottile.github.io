@@ -14,25 +14,22 @@
     a { color:var(--accent-dark); text-decoration-thickness:1px; text-underline-offset:4px; }
     a:hover { color:var(--accent); }
     a:focus-visible { outline:3px solid #F2B37E; outline-offset:3px; }
-    .container {
-  width: min(1120px, calc(100% - 48px));
-  margin: 0 auto;
-}
+    .container { width:min(var(--max-width),calc(100% - 48px)); margin:0 auto; }
     .site-header { border-bottom:1px solid var(--line); background:rgba(255,255,255,.97); }
-    .nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { font-family: Georgia, "Times New Roman", serif; color: var(--accent-dark); font-size: 29px; text-decoration: none; letter-spacing: -.6px; white-space: nowrap; }
-    .nav-links { display: flex; align-items: center; gap: 27px; }
-    .nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; padding: 26px 0 23px; border-bottom: 3px solid transparent; }
-    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--accent-dark); border-bottom-color: var(--accent); }
+    .nav-wrap { min-height:52px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { font-family:Georgia,"Times New Roman",serif; color:var(--accent-dark); font-size:25px; text-decoration:none; letter-spacing:-.6px; white-space:nowrap; }
+    .nav-links { display:flex; align-items:center; gap:23px; }
+    .nav-links a { color:var(--ink); text-decoration:none; font-size:12px; padding:14px 0 13px; border-bottom:2px solid transparent; white-space:nowrap; }
+    .nav-links a:hover,.nav-links a[aria-current="page"] { color:var(--accent-dark); border-bottom-color:var(--accent); }
     h1,h2,h3 { font-family:Georgia,"Times New Roman",serif; font-weight:400; line-height:1.15; }
     .page-intro { padding:66px 0 34px; max-width:760px; }
     .eyebrow { margin:0 0 14px; color:var(--accent-dark); text-transform:uppercase; letter-spacing:2px; font-size:12px; font-weight:750; }
     h1 { font-size:clamp(42px,5.2vw,64px); letter-spacing:-1.5px; margin:0 0 18px; }
     .lead { color:#55555A; font-size:17px; line-height:1.8; margin:0; }
     .accent-rule { height:3px; width:56px; background:var(--accent); margin:25px 0 0; }
-    .news-list { padding: 8px 0 76px; width: 100%; max-width: none; }
+    .news-list { padding:8px 0 76px; max-width:850px; }
     .news-item { display:grid; grid-template-columns:145px minmax(0,1fr); gap:30px; padding:30px 0 32px; border-top:1px solid var(--line); }
-    .news-date { color:var(--accent-dark); font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:1.3px; padding-top:5px; padding-left: 28px;}
+    .news-date { color:var(--accent-dark); font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:1.3px; padding-top:5px; padding-left: 24px;}
     .news-item h2 { font-size:clamp(23px,3vw,29px); margin:0 0 12px; }
     .news-item p { color:#55555A; margin:0 0 12px; }
     .news-item p:last-child { margin-bottom:0; }
@@ -40,20 +37,20 @@
     .site-footer { background:var(--soft); border-top:1px solid var(--line); }
     .footer-inner { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 0; color:var(--muted); font-size:13px; }
     .footer-inner p { margin:0; }
-    @media(max-width:700px) { .container { width:min(var(--max-width),calc(100% - 34px)); } .nav-wrap { padding:14px 0 0; align-items:flex-start; flex-direction:column; gap:5px; } .nav-links { gap:22px; width:100%; overflow-x:auto; } .nav-links a { padding:10px 0 13px; white-space:nowrap; } .page-intro { padding:48px 0 28px; } .news-item { grid-template-columns:1fr; gap:7px; padding:25px 0 28px; } .news-date { padding-top:0; } .footer-inner { align-items:flex-start; flex-direction:column; gap:7px; } }
+    @media(max-width:900px) { .nav-wrap { padding:17px 0 0; align-items:flex-start; flex-direction:column; gap:8px; } .nav-links { gap:22px; width:100%; overflow-x:auto; } .nav-links a { padding:10px 0 13px; } }\n    @media(max-width:700px) { .container { width:min(var(--max-width),calc(100% - 34px)); } .brand { font-size:27px; } .nav-links { gap:19px; } .nav-links a { font-size:13px; } .page-intro { padding:48px 0 28px; } .news-item { grid-template-columns:1fr; gap:7px; padding:25px 0 28px; } .news-date { padding-top:0; } .footer-inner { align-items:flex-start; flex-direction:column; gap:7px; } }
     @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; } }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Sara Sottile, home">Sara Sottile</a>
+      <a class="brand" href="https://sarasottile.github.io/index.html" aria-label="Sara Sottile, home">Sara Sottile</a>
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="cv.html">About me</a>
-        <a href="research.html">Research</a>
-        <a href="pubbl.html">Publications</a>
-        <a href="news.html" aria-current="page">News</a>
+        <a href="https://sarasottile.github.io/index.html">Home</a>
+        <a href="https://sarasottile.github.io/cv.html">About me</a>
+        <a href="https://sarasottile.github.io/research.html">Research</a>
+        <a href="https://sarasottile.github.io/pubbl.html">Publications</a>
+        <a href="https://sarasottile.github.io/news.html" aria-current="page">News</a>
       </nav>
     </div>
   </header>
