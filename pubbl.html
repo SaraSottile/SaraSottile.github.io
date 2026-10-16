@@ -1,126 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- HEAD -->
 <head>
-<meta charset="utf-8">
-<title> Sara Sottile </title>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="">
-<meta name="description" content="">
-
-<!-- CSS FILES -->	
-<link rel="stylesheet" href="Template/css/bootstrap.min.css">
-<link rel="stylesheet" href="Template/css/template.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
-<link rel="stylesheet" href="Template/fonts/academicons-1.9.0/css/academicons.min.css"/>
-</link>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Scientific publications by Sara Sottile in mathematical modelling, epidemiology, medical statistics and health technology assessment.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Sara Sottile | Publications</title>
+  <style>
+    :root { --accent:#D36100; --accent-dark:#A94D00; --accent-pale:#FFF2E7; --ink:#242424; --muted:#66666B; --line:#E8E5E1; --paper:#FFFFFF; --soft:#FAF8F5; --max-width:1120px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.7; -webkit-font-smoothing:antialiased; }
+    a { color:var(--accent-dark); text-decoration-thickness:1px; text-underline-offset:4px; }
+    a:hover { color:var(--accent); }
+    a:focus-visible { outline:3px solid #F2B37E; outline-offset:3px; }
+    .container { width:min(var(--max-width),calc(100% - 48px)); margin:0 auto; }
+    .site-header { border-bottom:1px solid var(--line); background:rgba(255,255,255,.97); }
+    .nav-wrap { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { font-family:Georgia,"Times New Roman",serif; color:var(--accent-dark); font-size:29px; text-decoration:none; letter-spacing:-.6px; white-space:nowrap; }
+    .nav-links { display:flex; align-items:center; gap:27px; }
+    .nav-links a { color:var(--ink); text-decoration:none; font-size:14px; padding:26px 0 23px; border-bottom:3px solid transparent; }
+    .nav-links a:hover,.nav-links a[aria-current="page"] { color:var(--accent-dark); border-bottom-color:var(--accent); }
+    h1,h2,h3 { font-family:Georgia,"Times New Roman",serif; font-weight:400; line-height:1.15; }
+    h1 { font-size:clamp(42px,5.2vw,64px); letter-spacing:-1.5px; margin:0 0 14px; }
+    h2 { font-size:25px; margin:0 0 12px; }
+    .eyebrow { margin:0 0 14px; color:var(--accent-dark); text-transform:uppercase; letter-spacing:2px; font-size:12px; font-weight:750; }
+    .page-intro { padding:60px 0 35px; max-width:780px; }
+    .page-intro p:last-child { color:#55555A; font-size:17px; line-height:1.85; margin:0; }
+    .publication-meta { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:0 0 25px; color:var(--muted); font-size:14px; }
+    .pill { display:inline-block; padding:4px 10px; border-radius:999px; background:var(--accent-pale); color:var(--accent-dark); font-size:12px; font-weight:700; }
+    .publication-list { border-top:1px solid var(--line); margin-bottom:64px; }
+    .publication { display:grid; grid-template-columns:72px minmax(0,1fr); gap:24px; padding:27px 0 29px; border-bottom:1px solid var(--line); }
+    .pub-year { color:var(--accent-dark); font-family:Georgia,"Times New Roman",serif; font-size:23px; line-height:1.2; padding-top:2px; }
+    .pub-title { font-family:Georgia,"Times New Roman",serif; font-size:21px; line-height:1.4; margin:0 0 9px; }
+    .pub-title a { text-decoration:none; }
+    .pub-title a:hover { text-decoration:underline; }
+    .pub-authors { margin:0 0 7px; color:#4F4F54; font-size:14px; line-height:1.75; }
+    .pub-journal { margin:0; color:var(--muted); font-size:14px; line-height:1.75; }
+    .pub-doi { display:inline-block; margin-top:9px; font-size:13px; font-weight:650; text-decoration:none; }
+    .site-footer { background:var(--soft); border-top:1px solid var(--line); }
+    .footer-inner { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 0; color:var(--muted); font-size:13px; }
+    .footer-inner p { margin:0; }
+    @media(max-width:900px) { .nav-wrap { align-items:flex-start; flex-direction:column; padding:17px 0 0; gap:8px; } .nav-links { gap:22px; width:100%; overflow-x:auto; } .nav-links a { padding:10px 0 13px; white-space:nowrap; } }
+    @media(max-width:620px) { .container { width:min(100% - 34px,var(--max-width)); } .brand { font-size:27px; } .nav-links { gap:19px; } .nav-links a { font-size:13px; } .page-intro { padding:38px 0 28px; } .page-intro p:last-child { font-size:15px; } .publication { grid-template-columns:1fr; gap:8px; padding:23px 0; } .pub-year { font-size:18px; } .pub-title { font-size:20px; } .footer-inner { align-items:flex-start; flex-direction:column; gap:7px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; } }
+  </style>
 </head>
-
-<body data-spy="scroll" data-target=".navbar-collapse">
-
-<div class="preloader">
-	<div class="sk-spinner sk-spinner-wordpress">
-       <span class="sk-inner-circle"></span>
-     </div>
-</div>
-	
-
-<!-- HEADEAR -->
-<header>
-<section class="container">
-<div class = "menu">
-<a style="color:orange" class="current-page" href="index.html"> <span> Home </span> </a> &nbsp;&nbsp;&nbsp;&nbsp;
-<a style="color:orange" href="cv.html"> <span> About me </span> </a> &nbsp;&nbsp;&nbsp;&nbsp;
-<a style="color:orange" href="pubbl.html"> <span> Publications</span> </a> &nbsp;&nbsp;&nbsp;&nbsp;
-</div>
-</section>
-</header>
-
-
-	
-<!-- SECTIONS -->	
-<section class="container">
-<div class="contact">
-<h2> Publications </h2>
-<p><li>
-	 Seyedi, S., Sottile, S., Abedini, M., Boffetta, P., Violante, F.S., Lodi, V., De Palma, G., Sala, E., Mauro, M., Rui, F., et al., <i>“Antibody Kinetics of Immunological
-Memory in SARS-CoV-2-Vaccinated Healthcare Workers—The ORCHESTRA Project”</i>, Vaccines (2025), Vol. 13, Issue 6, pp. 611. doi: <a style="color:orange" href="https://doi.org/10.3390/vaccines13060611">vaccines13060611</a>.
-
-</li></p>
-	
-<p><li>Calabrò, G.E. et al., <i>“Health Technology Assessment del vaccino antinfluenzale quadrivalente adiuvato Fluad Tetra®: update”</i>, Journal of Preventive Medicine and Hygiene (2025), Vol. 66, Issue 1 Suppl. 2, pp. E1-E56. doi: <a style="color:orange" href="https://doi.org/10.15167/2421-4248/jpmh2025.66.1S2.">jpmh2025.66.1S2</a>.
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rizzo, C., Sottile, S., Di Serafino, F. and Pugliese, A., Chapter 5: <i>“Valutazione economica dell’introduzione del vaccino aQIV nella popolazione italiana di
-età superiore ai 60 anni”</i>
-</li></p>
-
-<p><li>Achterberg, M.A., Sensi, M. and Sottile, S., <i>“A minimal model for multigroup adaptive SIS epidemics”</i>, Chaos: An Interdisciplinary Journal of Nonlinear Science, (2025), Vol.35. doi: <a style="color:orange" href="https://https://doi.org/10.1063/5.0246228" target="_blank">5.0246228"</a>.
-</li></p>
-	
-<p><li>
-Bulai, I. M., Sensi, M. and Sottile, S., <i>“A geometric analysis of the SIRS compartmental model with fast information and misinformation spreading”</i>, Chaos, Solitons and Fractals (2024). doi: <a style="color:orange" href="https://doi.org/10.1016/j.chaos.2024.115104" target="_blank">j.chaos.2024.115104</a>.
-</li></p>
-
-<p><li>
-Kaklamanos, P., Pugliese, A., Sensi, M. and Sottile, S., <i>“A geometric analysis of the SIRS model with secondary infections”</i>, SIAM Journal on Applied Mathematics (2024). doi: <a style="color:orange" href="https://doi.org/10.1137/23m1565632" target="_blank">10.1137/23m1565632</a>.
-</li></p>
-	
-<p><li> Della Marca, R., d'Onofrio, A., Sensi, M. and Sottile, S. <i>“A geometric analysis of the impact of large but finite switching rates on vaccination evolutionary games”</i>, Nonlinear Analysis: Real World Applications (2024). doi: <a style="color:orange" href="https://doi.org/10.1016/j.nonrwa.2023.103986" target="_blank">j.nonrwa.2023.103986</a>.
-</p>
-	
-<p><li> Cangiotti, N., Capolli, M., Sensi, M. and Sottile, S. <i>“A survey on Lyapunov functions for epidemic compartmental models”</i>, Bollettino dell’Unione Matematica Italiana (2023). doi: <a style="color:orange" href="https://doi.org/10.1007/s40574-023-00368-6" target="_blank">10.1007/s40574-023-00368-6</a>.</p>
-	
-<p><li>Ottaviano, S., Sensi, M. and Sottile, S. <i>“Global stability of multi-group SAIRS epidemic models”</i>, Mathematical Methods in the Applied Sciences (2023). doi: <a style="color:orange" href="http://doi.org/10.1002/mma.9303" target="_blank">10.1002/mma.9303</a>.</p>
-</p>
-
-<p><li>Calabrò, G.E. et al. <i>“Health Technology Assessment: a value-based tool for the evaluation of healthcare technologies. Reassessment of the cell-culture-derived quadrivalent influenza vaccine: Flucelvax Tetra® 2.0”</i>, Journal Preventive Medicine and Hygiene (2022), Vol. 63, Issue 4, Suppl. 1, pp. E1-E138. doi: <a style="color:orange" href="https://doi.org/10.15167/2421-4248/jpmh2022.63.4S1" target="_blank">10.15167/2421-4248/jpmh2022.63.4S1</a>.
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rizzo, C., Saraceno, G., Sottile, S., Abreha, F.M. and Pugliese A. Chapter 5: <i>“Valutazione
-economica dell’introduzione del nuovo vaccino antinfluenzale quadrivalente da coltura cellulare nel contesto di cura italiano (update da nuova indicazione)”</i>, pp. E90-E97.</p>
-</p>	
-	
-<p><li>Fochesato, A., Sottile, S., Pugliese, A., Márquez-Peláez, S., Toro-Diaz, H., Gani, R.,
-Alvarez, P., Ruiz-Aragón, J. <i>“An Economic Evaluation of the Adjuvanted Quadrivalent Influenza Vaccine Compared with Standard-Dose Quadrivalent Influenza Vaccine in the Spanish Older Adult Population”</i>, Vaccines (2022), Vol. 10, pp.1360. doi: <a style="color:orange" href="https://doi.org/10.3390/vaccines10081360" target="_blank">10.3390/vaccines100813601</a>.
-</p>
-
-<p><li>Sottile, S., Kahramanoğulları, O. and Sensi, M. <i>“How network properties and epidemic parameters influence stochastic SIR dynamics on scale-free random networks”</i>, Journal of Simulation (2022). [<a style="color:orange" href="https://doi.org/10.1080/17477778.2022.2100724" target="_blank">doi</a>, <a style="color:orange" href="https://github.com/SaraSottile/StochasticSIRnetwork" target="_blank">repository</a>]</p>	
-
-<p><li>Ottaviano, S., Sensi, M. and Sottile, S.<i>“Global stability of SAIRS epidemic models”</i>, Nonlinear Analysis: Real World Applications (2022), Vol. 65, pp. 103501. doi: <a style="color:orange" href="https://doi.org/10.1016/j.nonrwa.2021.103501" target="_blank">10.1016/j.nonrwa.2021.103501</a>.</p>
-</p> 
-	
-<p><li>Boccalini, S. et al. <i>“Health Technology Assessment (HTA) of the introduction of influenza vaccination for Italian children”</i>, Journal Preventive Medicine and Hygiene (2021), Vol. 62, Issue 2, Suppl. 1, pp. E1-E128. doi: <a style="color:orange" href="https://doi.org/10.15167/2421-4248/jpmh2021.62.2s1" target="_blank">10.15167/2421-4248/jpmh2021.62.2s1</a>.
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rizzo, C., Sottile, S. and Pugliese A. Chapter 6: <i>“Valutazione economica dell’introduzione del vaccino antinfluenzale vivo attenuato (Fluenz Tetra®) nella popolazione giovanile italiana (2-6 anni)”</i>, pp. E77-E86.</p>
-</p>
-
-<p><li>Sottile, S. and Liu, X. <i>“Time-varying epidemic transmission in heterogeneous networks and applications to measles”</i>, Journal of Biological
-Systems (2020), Vol. 28, No. 4, pp. 1-26. doi: <a style="color:orange" href="https://doi.org/10.1142/S0218339020500217" target="_blank">10.1142/S0218339020500217</a>.</p>
-<hr>
-</div>
-</section>
-			
-	
-<!--  FOOTER -->
-<footer>
-<ul class="social-icons">
-<li><a href="https://github.com/SaraSottile" class="fab fa-github"></a> </li>
-<li><a href="https://www.linkedin.com/in/sarasottile/" class="fab fa-linkedin"></a></li>
-<li><a href="https://twitter.com/sara_sottile95" class="fab fa-twitter"></a></li>
-<li><a href="https://www.researchgate.net/profile/Sara_Sottile4" class="fab fa-researchgate"></a> </li>
-<li><a href="https://scholar.google.com/citations?user=kHBXtEEAAAAJ&hl=it" class="ai ai-google-scholar"></a></li>
-<li><a href="https://orcid.org/0000-0001-7810-2099" class="ai ai-orcid"></a></li>
-	<li><a href="https://arxiv.org/search/?query=Sottile%2C+Sara&searchtype=author&abstracts=hide&order=-announced_date_first&size=50" class="ai ai-arxiv"></a></li>
-<li><a href="https://www.scopus.com/authid/detail.uri?authorId=57219591020" class="ai ai-scopus"></a></li>
-<li><a href="https://webapps.unitn.it/du/it/Persona/PER0221423/Curriculum" class="fas fa-university"></a></li>
-</div> </li>
-</ul>
-</footer>
-
-
-<!--  javascript js -->
-<script src="Template/js/jquery.js"></script>
-<script src="Template/js/bootstrap.min.js"></script>	
-<script src="Template/js/jquery.backstretch.min.js"></script> 
-<script src="Template/js/custom.js"></script>
-
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Sara Sottile, home">Sara Sottile</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="cv.html">About me</a>
+        <a href="pubbl.html" aria-current="page">Publications</a>
+        <a href="news.html">News</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="page-intro" aria-labelledby="page-title">
+      <p class="eyebrow">Research output</p>
+      <h1 id="page-title">Publications</h1>
+      <p>Selected and peer-reviewed research contributions in mathematical modelling, epidemic dynamics, medical statistics and health technology assessment.</p>
+    </section>
+    <section class="publication-list" aria-label="Publications in reverse chronological order">
+      <article class="publication">
+        <div class="pub-year">2026</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.1371/journal.pcbi.1014740" target="_blank" rel="noopener noreferrer">Methotrexate’s effect on cells and adalimumab immunogenicity in axial spondyloarthritis: A mathematical study</a></h2>
+          <p class="pub-authors"><strong>Sottile, S.</strong>, Paul, C., Audo, R., Rispens, T., Mulleman, D. and Rashkov, P.</p>
+          <p class="pub-journal"><em>PLOS Computational Biology</em>, 22(9), e1014740.</p>
+          <a class="pub-doi" href="https://doi.org/10.1371/journal.pcbi.1014740" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-year">2025</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.3390/vaccines13060611" target="_blank" rel="noopener noreferrer">Antibody Kinetics of Immunological Memory in SARS-CoV-2-Vaccinated Healthcare Workers—The ORCHESTRA Project</a></h2>
+          <p class="pub-authors">Seyedi, S., <strong>Sottile, S.</strong>, Abedini, M., Boffetta, P., Violante, F.S., Lodi, V., De Palma, G., Sala, E., Mauro, M., Rui, F., et al.</p>
+          <p class="pub-journal"><em>Vaccines</em>, 13(6), 611.</p>
+          <a class="pub-doi" href="https://doi.org/10.3390/vaccines13060611" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-year">2025</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.15167/2421-4248/jpmh2025.66.1S2" target="_blank" rel="noopener noreferrer">Health Technology Assessment del vaccino antinfluenzale quadrivalente adiuvato Fluad Tetra®: update</a></h2>
+          <p class="pub-authors">Calabrò, G.E. et al.; contribution by Rizzo, C., <strong>Sottile, S.</strong>, Di Serafino, F. and Pugliese, A., Chapter 5: “Valutazione economica dell’introduzione del vaccino aQIV nella popolazione italiana di età superiore ai 60 anni”.</p>
+          <p class="pub-journal"><em>Journal of Preventive Medicine and Hygiene</em>, 66(1 Suppl. 2), E1–E56.</p>
+          <a class="pub-doi" href="https://doi.org/10.15167/2421-4248/jpmh2025.66.1S2" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-year">2025</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.1063/5.0246228" target="_blank" rel="noopener noreferrer">A minimal model for multigroup adaptive SIS epidemics</a></h2>
+          <p class="pub-authors">Achterberg, M.A., Sensi, M. and <strong>Sottile, S.</strong></p>
+          <p class="pub-journal"><em>Chaos: An Interdisciplinary Journal of Nonlinear Science</em>, 35(3).</p>
+          <a class="pub-doi" href="https://doi.org/10.1063/5.0246228" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-year">2024</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.1016/j.chaos.2024.115104" target="_blank" rel="noopener noreferrer">A geometric analysis of the SIRS compartmental model with fast information and misinformation spreading</a></h2>
+          <p class="pub-authors">Bulai, I.M., Sensi, M. and <strong>Sottile, S.</strong></p>
+          <p class="pub-journal"><em>Chaos, Solitons &amp; Fractals</em>, 185, 115104.</p>
+          <a class="pub-doi" href="https://doi.org/10.1016/j.chaos.2024.115104" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-year">2024</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.1137/23M1565632" target="_blank" rel="noopener noreferrer">A geometric analysis of the SIRS model with secondary infections</a></h2>
+          <p class="pub-authors">Kaklamanos, P., Pugliese, A., Sensi, M. and <strong>Sottile, S.</strong></p>
+          <p class="pub-journal"><em>SIAM Journal on Applied Mathematics</em>, 84(2), 661–686.</p>
+          <a class="pub-doi" href="https://doi.org/10.1137/23M1565632" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-year">2024</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.1016/j.nonrwa.2023.103986" target="_blank" rel="noopener noreferrer">A geometric analysis of the impact of large but finite switching rates on vaccination evolutionary games</a></h2>
+          <p class="pub-authors">Della Marca, R., d’Onofrio, A., Sensi, M. and <strong>Sottile, S.</strong></p>
+          <p class="pub-journal"><em>Nonlinear Analysis: Real World Applications</em>, 75, 103986.</p>
+          <a class="pub-doi" href="https://doi.org/10.1016/j.nonrwa.2023.103986" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-year">2024</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.1007/s40574-023-00368-6" target="_blank" rel="noopener noreferrer">A survey on Lyapunov functions for epidemic compartmental models</a></h2>
+          <p class="pub-authors">Cangiotti, N., Capolli, M., Sensi, M. and <strong>Sottile, S.</strong></p>
+          <p class="pub-journal"><em>Bollettino dell’Unione Matematica Italiana</em>, 17, 241–257.</p>
+          <a class="pub-doi" href="https://doi.org/10.1007/s40574-023-00368-6" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-year">2023</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.1002/mma.9303" target="_blank" rel="noopener noreferrer">Global stability of multi-group SAIRS epidemic models</a></h2>
+          <p class="pub-authors">Ottaviano, S., Sensi, M. and <strong>Sottile, S.</strong></p>
+          <p class="pub-journal"><em>Mathematical Methods in the Applied Sciences</em>, 46(16), 14045–14071.</p>
+          <a class="pub-doi" href="https://doi.org/10.1002/mma.9303" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-year">2022</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.15167/2421-4248/jpmh2022.63.4S1" target="_blank" rel="noopener noreferrer">Health Technology Assessment: a value-based tool for the evaluation of healthcare technologies. Reassessment of the cell-culture-derived quadrivalent influenza vaccine: Flucelvax Tetra® 2.0</a></h2>
+          <p class="pub-authors">Calabrò, G.E. et al.; contribution by Rizzo, C., Saraceno, G., <strong>Sottile, S.</strong>, Abreha, F.M. and Pugliese, A., Chapter 5.</p>
+          <p class="pub-journal"><em>Journal of Preventive Medicine and Hygiene</em>, 63(4 Suppl. 1), E1–E138.</p>
+          <a class="pub-doi" href="https://doi.org/10.15167/2421-4248/jpmh2022.63.4S1" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-year">2022</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.3390/vaccines10081360" target="_blank" rel="noopener noreferrer">An Economic Evaluation of the Adjuvanted Quadrivalent Influenza Vaccine Compared with Standard-Dose Quadrivalent Influenza Vaccine in the Spanish Older Adult Population</a></h2>
+          <p class="pub-authors">Fochesato, A., <strong>Sottile, S.</strong>, Pugliese, A., Márquez-Peláez, S., Toro-Diaz, H., Gani, R., Alvarez, P. and Ruiz-Aragón, J.</p>
+          <p class="pub-journal"><em>Vaccines</em>, 10, 1360.</p>
+          <a class="pub-doi" href="https://doi.org/10.3390/vaccines10081360" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-year">2022</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.1080/17477778.2022.2100724" target="_blank" rel="noopener noreferrer">How network properties and epidemic parameters influence stochastic SIR dynamics on scale-free random networks</a></h2>
+          <p class="pub-authors"><strong>Sottile, S.</strong>, Kahramanoğulları, O. and Sensi, M.</p>
+          <p class="pub-journal"><em>Journal of Simulation</em>, 18(2), 206–219.</p>
+          <a class="pub-doi" href="https://doi.org/10.1080/17477778.2022.2100724" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-year">2022</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.1016/j.nonrwa.2021.103501" target="_blank" rel="noopener noreferrer">Global stability of SAIRS epidemic models</a></h2>
+          <p class="pub-authors">Ottaviano, S., Sensi, M. and <strong>Sottile, S.</strong></p>
+          <p class="pub-journal"><em>Nonlinear Analysis: Real World Applications</em>, 26, 103501.</p>
+          <a class="pub-doi" href="https://doi.org/10.1016/j.nonrwa.2021.103501" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-year">2021</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.15167/2421-4248/jpmh2021.62.2s1" target="_blank" rel="noopener noreferrer">Health Technology Assessment (HTA) of the introduction of influenza vaccination for Italian children</a></h2>
+          <p class="pub-authors">Boccalini, S. et al.; contribution by Rizzo, C., <strong>Sottile, S.</strong> and Pugliese, A., Chapter 6: “Valutazione economica dell’introduzione del vaccino antinfluenzale vivo attenuato (Fluenz Tetra®) nella popolazione giovanile italiana (2–6 anni)”.</p>
+          <p class="pub-journal"><em>Journal of Preventive Medicine and Hygiene</em>, 62(2 Suppl. 1), E1–E128.</p>
+          <a class="pub-doi" href="https://doi.org/10.15167/2421-4248/jpmh2021.62.2s1" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-year">2020</div><div>
+          <h2 class="pub-title"><a href="https://doi.org/10.1142/S0218339020500217" target="_blank" rel="noopener noreferrer">Time-varying epidemic transmission in heterogeneous networks and applications to measles</a></h2>
+          <p class="pub-authors"><strong>Sottile, S.</strong> and Liu, X.</p>
+          <p class="pub-journal"><em>Journal of Biological Systems</em>, 28(4), 1–26.</p>
+          <a class="pub-doi" href="https://doi.org/10.1142/S0218339020500217" target="_blank" rel="noopener noreferrer">View publication ↗</a>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Sara Sottile</p>
+      <p>Medical Statistics · Mathematical Modelling · Epidemiology</p>
+    </div>
+  </footer>
 </body>
 </html>
