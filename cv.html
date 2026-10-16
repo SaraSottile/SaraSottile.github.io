@@ -34,12 +34,12 @@
       border-bottom: 1px solid var(--line);
       background: rgba(255,255,255,.96);
     }
-     .nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { font-family: Georgia, "Times New Roman", serif; color: var(--accent-dark); font-size: 29px; text-decoration: none; letter-spacing: -.6px; white-space: nowrap; }
-    .nav-links { display: flex; align-items: center; gap: 27px; }
-    .nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; padding: 26px 0 23px; border-bottom: 3px solid transparent; }
-    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--accent-dark); border-bottom-color: var(--accent); }
-    .container { width: min(var(--max-width, 1120px), calc(100% - 48px)); margin: 0 auto; }
+     .container { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+     .nav-wrap { min-height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+     .brand { font-family: Georgia, "Times New Roman", serif; color: var(--orange-dark); font-size: 25px; text-decoration: none; letter-spacing: -.6px; white-space: nowrap; }
+     .nav-links { display: flex; align-items: center; gap: 23px; }
+     .nav-links a { color: #242424; text-decoration: none; font-size: 12px; padding: 14px 0 13px; border-bottom: 2px solid transparent; white-space: nowrap; }
+     .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--orange-dark); border-bottom-color: var(--orange); }
     .intro { padding: 76px 0 46px; }
     .eyebrow {
       color: var(--orange-dark);
@@ -100,10 +100,16 @@
       display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
       color: var(--muted); font-size: .86rem;
     }
+    @media (max-width: 900px) {
+      .nav-wrap { align-items: flex-start; flex-direction: column; gap: 8px; padding: 17px 0 0; }
+      .nav-links { gap: 22px; width: 100%; overflow-x: auto; }
+      .nav-links a { padding: 10px 0 13px; }
+    }
     @media (max-width: 720px) {
-      .nav-wrap { align-items: flex-start; flex-direction: column; gap: 12px; padding: 16px 22px; }
-      .nav-links { gap: 18px; }
-      .container { width: min(100% - 36px, 1040px); }
+      .container { width: min(100% - 36px, 1120px); }
+      .brand { font-size: 27px; }
+      .nav-links { gap: 19px; }
+      .nav-links a { font-size: 13px; }
       .intro { padding: 54px 0 34px; }
       .section { padding: 32px 0; }
       .section-grid { grid-template-columns: 1fr; gap: 14px; }
@@ -113,30 +119,17 @@
     }
   </style>
 
-<style>
-  .nav-links a {
-    border-bottom: 3px solid transparent !important;
-    text-decoration: none !important;
-  }
-  .nav-links a:hover,
-  .nav-links a[aria-current="page"] {
-    border-bottom-color: #D36100 !important;
-    color: #A94D00 !important;
-    text-decoration: none !important;
-  }
-</style>
-
 </head>
 <body>
   <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="index.html">Sara <span>Sottile</span></a>
+    <div class="container nav-wrap">
+      <a class="brand" href="https://sarasottile.github.io/index.html">Sara Sottile</a>
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="cv.html" aria-current="page">About me</a>
-        <a href="research.html">Research</a>
-        <a href="pubbl.html">Publications</a>
-        <a href="news.html">News</a>
+        <a href="https://sarasottile.github.io/index.html">Home</a>
+        <a href="https://sarasottile.github.io/cv.html" aria-current="page">About me</a>
+        <a href="https://sarasottile.github.io/research.html">Research</a>
+        <a href="https://sarasottile.github.io/pubbl.html">Publications</a>
+        <a href="https://sarasottile.github.io/news.html">News</a>
       </nav>
     </div>
   </header>
