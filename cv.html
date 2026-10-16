@@ -34,30 +34,14 @@
       border-bottom: 1px solid var(--line);
       background: rgba(255,255,255,.96);
     }
-    .nav-wrap {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 18px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-    .brand { font-family: Georgia, "Times New Roman", serif; color: var(--accent-dark); font-size: 29px; text-decoration: none; letter-spacing: -.6px; white-space: nowrap; 
-      color: #D36100;
-      opacity: 1;
-      filter: none;
-      background: none;
-      background-image: none;
-      -webkit-background-clip: initial;
-      -webkit-text-fill-color: #D36100;
-      text-shadow: none;
-    }
+    .nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-family: Georgia, "Times New Roman", serif; color: var(--accent-dark, #A94D00); font-size: 29px; font-weight: 400; text-decoration: none; letter-spacing: -.6px; white-space: nowrap; opacity: 1; filter: none; background: none; -webkit-text-fill-color: var(--accent-dark, #A94D00); }
     .brand span { color: var(--orange); }
-    .nav-links { display: flex; align-items: center; gap: 27px; }
+    .nav-links { display: flex; align-items: center; gap: 27px; flex-wrap: nowrap; }
     .nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; padding: 26px 0 23px; border-bottom: 3px solid transparent; }
-    .nav-links a:hover,
-    .container { width: min(100% - 48px, 1040px); margin: 0 auto; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--accent-dark); border-bottom-color: var(--accent); }
+    .nav-links a[aria-current="page"] { font-weight: 700; }
+    .container { width: min(var(--max-width, 1120px), calc(100% - 48px)); margin: 0 auto; }
     .intro { padding: 76px 0 46px; }
     .eyebrow {
       color: var(--orange-dark);
@@ -132,17 +116,18 @@
   </style>
 
 <style>
-  .brand, .brand:visited, .brand:hover, .brand:focus {
-    color: #D36100 !important;
-    opacity: 1 !important;
-    filter: none !important;
-    background: none !important;
-    background-image: none !important;
-    -webkit-background-clip: initial !important;
-    -webkit-text-fill-color: #D36100 !important;
-    text-shadow: none !important;
+  .nav-links a {
+    border-bottom: 3px solid transparent !important;
+    text-decoration: none !important;
+  }
+  .nav-links a:hover,
+  .nav-links a[aria-current="page"] {
+    border-bottom-color: #D36100 !important;
+    color: #A94D00 !important;
+    text-decoration: none !important;
   }
 </style>
+
 </head>
 <body>
   <header class="site-header">
