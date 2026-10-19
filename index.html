@@ -108,6 +108,51 @@
       .info-block:last-child { grid-column: auto; }
       .topic-grid { grid-template-columns: 1fr; }
       .research-strip { padding: 35px 0; }
+      .news-strip {
+  padding: 34px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.news-strip-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 22px 24px;
+  background: var(--soft);
+  border-left: 3px solid var(--accent);
+}
+
+.news-strip h2 {
+  margin: 0 0 6px;
+  font-size: 27px;
+}
+
+.news-strip p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.news-strip-link {
+  flex-shrink: 0;
+  color: var(--accent-dark);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.news-strip-link:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 620px) {
+  .news-strip-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+  }
+}
       .section-heading { display: block; }
       .section-heading p { margin-top: 8px; }
       .footer-inner { align-items: flex-start; flex-direction: column; gap: 7px; }
@@ -192,6 +237,16 @@
       </div>
     </section>
 
+    <section class="container news-strip" aria-labelledby="news-strip-title">
+  <div class="news-strip-inner">
+    <div>
+      <h2 id="news-strip-title">Latest news</h2>
+      <p>Recent updates on publications, research activities and academic appointments.</p>
+    </div>
+    <a class="news-strip-link" href="news.html">All news →</a>
+  </div>
+</section>
+    
     <section class="container research-strip" id="research" aria-labelledby="research-title">
       <div class="section-heading">
         <h2 id="research-title">Research Overview</h2>
